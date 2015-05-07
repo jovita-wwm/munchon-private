@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="F:\Jovita\KMB\beacons\KMB-githubdownload-workspace\CircularImageView\res"><file path="F:\Jovita\KMB\beacons\KMB-githubdownload-workspace\CircularImageView\res\values\attrs.xml" qualifiers=""><declare-styleable name="CircularImageView">
+        <attr format="boolean" name="border"/>
+        <attr format="dimension" name="border_width"/>
+        <attr format="color" name="border_color"/>
+        <attr format="boolean" name="shadow"/>
+    </declare-styleable><declare-styleable name="Theme">
+        <attr format="reference" name="circularImageViewStyle"/>
+    </declare-styleable></file></source><source path="F:\Jovita\KMB\beacons\KMB-githubdownload-workspace\CircularImageView\build\generated\res\rs\release"/><source path="F:\Jovita\KMB\beacons\KMB-githubdownload-workspace\CircularImageView\build\generated\res\generated\release"/></dataSet><dataSet config="release"><source path="F:\Jovita\KMB\beacons\KMB-githubdownload-workspace\CircularImageView\build-types\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="CircularImageView"><attr format="boolean" name="border"/><attr format="dimension" name="border_width"/><attr format="color" name="border_color"/><attr format="boolean" name="shadow"/></declare-styleable><declare-styleable name="Theme"><attr format="reference" name="circularImageViewStyle"/></declare-styleable></configuration></mergedItems></merger>

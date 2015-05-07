@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@drawable/layout_top_down_border"
+    android:orientation="horizontal" >
+<LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="2dp"
+              android:baselineAligned="false"
+              android:layout_weight="8" >
+             
+               <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="3" >
+               <TextView
+                      android:id="@+id/txt_item"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textSize="15sp"
+                      android:maxEms="12"
+                      android:ellipsize="end"
+						android:singleLine="true"
+                      android:textColor="@color/Munchon_gray"
+                      android:text="@string/item" />
+                   </LinearLayout>
+                   
+                    <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="2" >
+
+                     
+
+                        <RelativeLayout
+							android:id="@+id/num"                            
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" >
+ 
+                            <TextView
+                                android:id="@+id/txt_quantity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:gravity="right"
+                                android:text="@string/qty"
+                                android:textColor="@color/Munchon_gray"
+                                android:textSize="15sp" />
+
+                            <ImageView
+                                android:id="@+id/imageView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/txt_quantity"
+                                android:src="@android:drawable/arrow_down_float" />
+                            
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_weight="1" >
+                            
+                              <TextView
+                      android:id="@+id/txt_price"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/Munchon_gray"
+                      android:textSize="15sp"
+                      android:maxLength="5"
+                       android:gravity="center"
+                      android:text="@string/price" />
+                              
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_weight="1" >
+                              
+                               <TextView
+                      android:id="@+id/txt_total"
+                       android:gravity="right"
+                      android:layout_width="wrap_content"
+                      android:textSize="15sp"
+                      android:textColor="@color/Munchon_gray"
+                      android:layout_height="wrap_content"
+                      android:text="@string/total" /> 
+                      
+                               
+                        </RelativeLayout>
+                        
+                        </LinearLayout>
+           
+
+          </LinearLayout>
+
+</LinearLayout>

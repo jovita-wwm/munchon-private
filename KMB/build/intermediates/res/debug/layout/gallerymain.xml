@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:background="@android:color/white"
+    android:layout_height="fill_parent">
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    android:layout_weight="9"
+    >
+
+        <RelativeLayout
+            android:id="@+id/upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <TextView
+               
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="Upload Your Photos"
+                android:padding="6dp"
+                android:textColor="@android:color/darker_gray"
+                android:background="@drawable/gallerytextback"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </RelativeLayout>
+      
+        
+      </RelativeLayout>
+      
+   <RelativeLayout 
+        android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    >
+        
+         <ScrollView
+                       android:id="@+id/scrollView1"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content" >
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:orientation="vertical" >
+        <!-- <GridView
+         android:numColumns="auto_fit"
+         android:gravity="center"
+         android:columnWidth="100dp"
+         android:stretchMode="columnWidth"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:id="@+id/grid"
+         android:layout_weight="9"
+         /> -->
+           <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical" >
+
+                <!--  textview  android:textColor="@android:color/holo_green_dark" -->
+                <TextView
+                       android:id="@+id/txt_gridname1"
+                       android:layout_width="match_parent"
+                       android:layout_height="30dp"
+                       android:padding="5dp"
+                     android:visibility="gone"
+                        android:textSize="15dp"
+                       android:text="TextView" />
+      <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical" >
+    
+             <!-- grid  android:background="@android:color/holo_green_dark" -->         
+<com.simelabs.kmb.gallery.gallerygrid
+     android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="auto_fit"
+            android:gravity="center"
+           
+            android:columnWidth="100dp"
+            android:stretchMode="columnWidth"
+            android:id="@+id/grid1" />
+
+
+         
+               </RelativeLayout>
+                  <TextView
+                       android:id="@+id/txt_gridname2"
+                       android:layout_width="match_parent"
+                       android:layout_height="30dp"
+                       android:padding="5dp"
+                        android:textSize="15dp"
+                      android:visibility="gone"
+                       android:text="TextView" />
+      <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical" >
+    
+                      
+<com.simelabs.kmb.gallery.gallerygrid
+     android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="auto_fit"
+            android:gravity="center"
+          
+            android:columnWidth="100dp"
+            android:stretchMode="columnWidth"
+            android:id="@+id/grid2" />
+
+
+         
+               </RelativeLayout>
+                   <TextView
+                       android:id="@+id/txt_gridname3"
+                       android:layout_width="match_parent"
+                       android:layout_height="30dp"
+                       android:padding="5dp"
+                        android:textSize="15dp"
+                       android:visibility="gone"
+                       android:text="TextView" />
+      <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical" >
+    
+                      
+<com.simelabs.kmb.gallery.gallerygrid
+     android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="auto_fit"
+            android:gravity="center"
+            android:columnWidth="100dp"
+          
+            android:stretchMode="columnWidth"
+            android:id="@+id/grid3" />
+
+
+         
+               </RelativeLayout>
+               
+                   
+               
+               </LinearLayout>
+               
+            </LinearLayout>
+                   </ScrollView>
+       
+   </RelativeLayout>
+   
+      
+        
+  
+</LinearLayout>
+<!-- From: file:/F:/Jovita/KMB/beacons/KMB-githubdownload-workspace/KMB/res/layout/gallerymain.xml -->

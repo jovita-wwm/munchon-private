@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/action_bar_strip_white" >
+    
+       <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                
+                 <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_horizontal|center_vertical"
+                 android:orientation="vertical" >
+
+                     <ImageView
+                         android:id="@+id/btn_drawer"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_gravity="center_horizontal|left"
+                         android:background="@android:color/transparent"
+                         android:src="@drawable/icon_back" />
+                   
+                     </LinearLayout>
+                     
+                  <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical" >
+
+                      <TextView
+                          android:id="@+id/txt_title"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center_horizontal|center_vertical"
+                          android:text="Restaurant Name"
+                          android:textAppearance="?android:attr/textAppearanceMedium"
+                          android:textColor="#000000" />
+                   
+                     </LinearLayout>
+                     
+                  
+                 <LinearLayout
+                android:id="@+id/table_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:visibility="gone"
+                
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical" >
+                
+                 <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                
+                 <ImageView
+                     android:id="@+id/btn_table"
+                     android:layout_width="30dp"
+                     android:layout_height="30dp"
+                     android:layout_marginRight="10dp"
+                     android:layout_centerInParent="true"
+                     android:gravity="center_horizontal|center_vertical"
+                     android:background="@android:color/transparent"
+                     android:src="@drawable/icon_basket" />
+
+                 <TextView
+                     android:id="@+id/txt_table_no"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="3"
+                     android:layout_centerInParent="true"
+                     android:gravity="center_horizontal|center_vertical"
+                     android:textSize="13dp" />
+               
+                    </RelativeLayout>
+                    
+                 </LinearLayout>
+                     
+                 <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical" >
+                
+               <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                
+                 <ImageView
+                     android:id="@+id/btn_basket"
+                     android:layout_width="30dp"
+                     android:layout_height="30dp"
+                     android:layout_marginRight="5dp"
+                     android:layout_centerInParent="true"
+                     android:gravity="center_horizontal|center_vertical"
+                     android:background="@android:color/transparent"
+                     android:src="@drawable/icon_basket" />
+
+                 <TextView
+                     android:id="@+id/txt_basket_items"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="2"
+                     android:layout_centerInParent="true"
+                     android:gravity="center_horizontal|center_vertical"
+                     android:textSize="13dp" />
+               
+                 </RelativeLayout>
+                 
+                     </LinearLayout>
+</LinearLayout>
+          
+</LinearLayout>

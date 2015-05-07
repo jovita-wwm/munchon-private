@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/txt_parameter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:layout_marginRight="50dp"
+                android:text="Parameter 1"
+                android:textColor="#717171"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/img_dropDown"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:layout_toLeftOf="@+id/txt_label_selectQuantity"
+                android:src="@drawable/icon_options" />
+
+            <TextView
+                android:id="@+id/txt_parameterName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignTop="@+id/img_dropDown"
+                android:layout_margin="10dp"
+                android:layout_toLeftOf="@+id/img_dropDown"
+                android:text="Cheese"
+                android:textColor="#717171"
+                android:textSize="14dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

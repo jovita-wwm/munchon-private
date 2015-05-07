@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+     <Spinner
+        android:id="@+id/spinner_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Select Your City"
+        
+        android:prompt="@string/spinnertitle"
+    />
+     
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR" />
+
+    <Button
+        android:id="@+id/btn_getlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="getLocation"
+        android:text="Get Location" />
+    
+     <TextView
+        android:id="@+id/txt_defaultLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Your Default location is:" />
+
+</LinearLayout>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp" >
+
+                        <ImageView
+                            android:id="@+id/imageRest"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_margin="10dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/rest_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:paddingRight="15dp" >
+
+                        <ImageView
+                            android:id="@+id/btn_Call"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="right"
+                            android:src="@drawable/icon_call" />
+
+                        <ImageView
+                            android:id="@+id/btn_Directions"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="right"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/icon_directions" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_RestaurantLogo"
+                    android:layout_width="110dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/shadowbox" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txt_RestaurantAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:text="dsfghjgfdxsdfghjhgfdsdfgh ftfjhgujkgujkguf" />
+
+                <TextView
+                    android:id="@+id/txt_RestaurantDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:layout_marginTop="15dp"
+                    android:text="Serves blablablaajdhjshcdsj chajchakhcakj cdshfjhakjdha"
+                    android:textColor="#717171" />
+                
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
+
+                    <Button
+                        android:id="@+id/btn_DineIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/orderbtnback"
+                        android:padding="5dp"
+                        android:text="    Dine In   "
+                        android:textSize="13dp" />
+
+                    <Button
+                        android:id="@+id/btn_TakeAway"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/orderbtnback"
+                        android:padding="5dp"
+                        android:text="Take Away"
+                        android:textSize="13dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/label_opens"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Opens" />
+
+                    <TextView
+                        android:id="@+id/label_closes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="10dp"
+                        android:text="Closes" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="#fffd54"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_OpeningTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#5f5f5f"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:text="10:00 \n AM"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="#b0b0b0"
+                        android:gravity="bottom"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:maxLines="2"
+                            android:text="09:00 \n PM"
+                            android:textColor="#b0b0b0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_ClosingTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#5f5f5f"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:text="09:00 \n PM"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+                </LinearLayout>
+
+               
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

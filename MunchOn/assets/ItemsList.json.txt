@@ -1,0 +1,20 @@
+{
+    "Items": [
+        {
+            "Name": "Green Vally",
+            "quantity":2,
+            "price":8
+        },
+        {
+            "Name": "Mint Chip Ice Cream",
+            "quantity":2,
+            "price":5
+        },
+        {
+            "Name": "Cheese Bite",
+            "quantity":2,
+            "price":4
+        }
+       
+    ]
+}

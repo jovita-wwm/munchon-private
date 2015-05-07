@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MunchOn</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="demo">Sliding Demo</string>
+    <string name="spinnertitle">Select your City</string>
+
+    <!-- Place Order-Jovita -->
+
+    <string name="total">TOTAL</string>
+    <string name="qty">QTY</string>
+    <string name="price">UNIT PRICE</string>
+    <string name="item">ITEM</string>
+	<string name="take">TAKE AWAY</string>
+	<string name="Dine">DINE IN</string>
+	<string name="service">Service Charge</string>
+	<string name="amount">  Total \n (Inc.GST)</string>
+	<string name="time">Choose Pickup time</string>
+	<string name="email">Email the Receipt</string>
+	<string name="add">+ Add Item</string>
+	  <string name="order">Place Order</string>
+	  
+	  
+	 <!-- Account -Jovita --> 
+	  <string name="save">Save Changes</string>
+	   <string name="change_pass">Change Password</string>
+	    <string name="address">Address Book</string>
+	    
+	    
+	    <!-- Facebook -Jasmine --> 
+	 <string name="app_id">442883985871409</string>
+	 
+	 <!-- Create Account -Jasmine --> 
+	 <string name="Agreement">By clicking "Sign Up" you agree to our Terms of Use and Privacy Policy</string>
+	 
+	  
+</resources>

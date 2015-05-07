@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="@android:color/white"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="9"
+        android:layout_height="match_parent" >
+
+        <RadioButton
+            android:id="@+id/rdo_activity_payment_listitem_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_basket" />
+
+            <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Card number" />
+        </LinearLayout>
+
+        
+        
+         <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name" />
+         
+          <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date" />
+
+          <EditText
+              android:id="@+id/edt_activity_payment_listitem_cvv"
+              android:layout_width="80dp"
+              android:gravity="center"
+              android:layout_height="wrap_content"
+              android:visibility="gone"
+                android:hint="Enter CVV"
+                 android:textSize="12dip"
+                 android:padding="5dp"
+                 android:maxLines="1"
+               android:inputType="number"
+               android:maxLength="3"
+               android:maxEms="3"
+              android:background="@drawable/roundborder_light"
+              >
+
+          </EditText>
+
+    </LinearLayout>
+
+</LinearLayout>

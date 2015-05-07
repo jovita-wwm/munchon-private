@@ -1,0 +1,300 @@
+-- Merging decision tree log ---
+manifest
+ADDED from AndroidManifest.xml:1:1
+	xmlns:android
+		ADDED from AndroidManifest.xml:1:11
+	package
+		ADDED from AndroidManifest.xml:2:5
+	android:versionName
+		ADDED from AndroidManifest.xml:5:5
+	android:versionCode
+		ADDED from AndroidManifest.xml:3:5
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:installLocation
+		ADDED from AndroidManifest.xml:4:5
+supports-screens
+ADDED from AndroidManifest.xml:33:5
+	android:largeScreens
+		ADDED from AndroidManifest.xml:36:15
+	android:normalScreens
+		ADDED from AndroidManifest.xml:35:15
+	android:xlargeScreens
+		ADDED from AndroidManifest.xml:37:15
+	android:smallScreens
+		ADDED from AndroidManifest.xml:34:15
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from AndroidManifest.xml:41:6
+	android:name
+		ADDED from AndroidManifest.xml:41:23
+uses-permission#android.permission.INTERNET
+ADDED from AndroidManifest.xml:42:6
+	android:name
+		ADDED from AndroidManifest.xml:42:23
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from AndroidManifest.xml:43:2
+	android:name
+		ADDED from AndroidManifest.xml:43:19
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from AndroidManifest.xml:44:2
+	android:name
+		ADDED from AndroidManifest.xml:44:19
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from AndroidManifest.xml:45:2
+	android:name
+		ADDED from AndroidManifest.xml:45:19
+uses-permission#android.permission.BLUETOOTH
+ADDED from AndroidManifest.xml:46:3
+	android:name
+		ADDED from AndroidManifest.xml:46:20
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from AndroidManifest.xml:47:3
+	android:name
+		ADDED from AndroidManifest.xml:47:20
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from AndroidManifest.xml:48:3
+	android:name
+		ADDED from AndroidManifest.xml:48:20
+uses-feature#android.hardware.bluetooth_le
+ADDED from AndroidManifest.xml:51:3
+	android:required
+		ADDED from AndroidManifest.xml:51:62
+	android:name
+		ADDED from AndroidManifest.xml:51:17
+permission#info.androidhive.googlemapsv2.permission.MAPS_RECEIVE
+ADDED from AndroidManifest.xml:53:4
+	android:protectionLevel
+		ADDED from AndroidManifest.xml:55:9
+	android:name
+		ADDED from AndroidManifest.xml:54:9
+uses-permission#info.androidhive.googlemapsv2.permission.MAPS_RECEIVE
+ADDED from AndroidManifest.xml:57:5
+	android:name
+		ADDED from AndroidManifest.xml:57:22
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from AndroidManifest.xml:58:7
+	android:name
+		ADDED from AndroidManifest.xml:58:24
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from AndroidManifest.xml:61:5
+	android:name
+		ADDED from AndroidManifest.xml:61:22
+uses-feature#0x00020000
+ADDED from AndroidManifest.xml:65:5
+	android:required
+		ADDED from AndroidManifest.xml:67:9
+	android:glEsVersion
+		ADDED from AndroidManifest.xml:66:9
+uses-sdk
+ADDED from AndroidManifest.xml:74:5
+MERGED from KMB-githubdownload-workspace:CircularImageView:unspecified:7:5
+MERGED from KMB-githubdownload-workspace:google-play-services_lib:unspecified:23:5
+MERGED from KMB-githubdownload-workspace:ResideMenu:unspecified:7:5
+MERGED from KMB-githubdownload-workspace:CircularImageView:unspecified:7:5
+MERGED from KMB-githubdownload-workspace:FacebookSDK:unspecified:20:5
+	android:targetSdkVersion
+		ADDED from AndroidManifest.xml:76:9
+	android:minSdkVersion
+		ADDED from AndroidManifest.xml:75:9
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from AndroidManifest.xml:77:5
+	android:name
+		ADDED from AndroidManifest.xml:77:22
+uses-permission#android.permission.READ_CALENDAR
+ADDED from AndroidManifest.xml:78:5
+	android:name
+		ADDED from AndroidManifest.xml:78:22
+uses-permission#android.permission.WRITE_CALENDAR
+ADDED from AndroidManifest.xml:79:5
+	android:name
+		ADDED from AndroidManifest.xml:79:22
+application
+ADDED from AndroidManifest.xml:81:5
+MERGED from KMB-githubdownload-workspace:google-play-services_lib:unspecified:25:5
+MERGED from KMB-githubdownload-workspace:FacebookSDK:unspecified:22:5
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:86:6
+	android:label
+		ADDED from AndroidManifest.xml:84:9
+	android:allowBackup
+		ADDED from AndroidManifest.xml:82:9
+	android:icon
+		ADDED from AndroidManifest.xml:83:9
+	android:configChanges
+		ADDED from AndroidManifest.xml:87:1
+	android:theme
+		ADDED from AndroidManifest.xml:85:6
+	android:hardwareAccelerated
+		ADDED from AndroidManifest.xml:88:9
+activity#com.simelabs.kmb.activities.Splash
+ADDED from AndroidManifest.xml:91:10
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:92:17
+	android:configChanges
+		ADDED from AndroidManifest.xml:93:1
+	android:name
+		ADDED from AndroidManifest.xml:91:20
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:96:14
+action#android.intent.action.MAIN
+ADDED from AndroidManifest.xml:97:9
+	android:name
+		ADDED from AndroidManifest.xml:97:17
+category#android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:98:9
+	android:name
+		ADDED from AndroidManifest.xml:98:19
+activity#com.simelabs.kmb.activities.MainActivity
+ADDED from AndroidManifest.xml:105:10
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:107:16
+	android:configChanges
+		ADDED from AndroidManifest.xml:108:1
+	android:name
+		ADDED from AndroidManifest.xml:106:13
+activity#com.simelabs.kmb.spotbeak.ListBeaconsActivity
+ADDED from AndroidManifest.xml:112:10
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:113:17
+	android:configChanges
+		ADDED from AndroidManifest.xml:114:1
+	android:name
+		ADDED from AndroidManifest.xml:112:20
+activity#com.simelabs.kmb.spotbeak.DistanceBeaconActivity
+ADDED from AndroidManifest.xml:115:11
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:116:18
+	android:configChanges
+		ADDED from AndroidManifest.xml:117:1
+	android:name
+		ADDED from AndroidManifest.xml:115:21
+activity#com.simelabs.kmb.gallery.UploadActivity
+ADDED from AndroidManifest.xml:118:11
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:119:18
+	android:configChanges
+		ADDED from AndroidManifest.xml:120:1
+	android:name
+		ADDED from AndroidManifest.xml:118:21
+activity#com.simelabs.kmb.socialmedia.FActivity
+ADDED from AndroidManifest.xml:121:11
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:122:18
+	android:configChanges
+		ADDED from AndroidManifest.xml:123:1
+	android:name
+		ADDED from AndroidManifest.xml:121:21
+activity#com.simelabs.kmb.locationmap.MapManagerOutside
+ADDED from AndroidManifest.xml:124:11
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:125:18
+	android:configChanges
+		ADDED from AndroidManifest.xml:126:1
+	android:name
+		ADDED from AndroidManifest.xml:124:21
+activity#com.simelabs.kmb.spotbeak.BeaconDetailViewActivity
+ADDED from AndroidManifest.xml:127:12
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:128:19
+	android:configChanges
+		ADDED from AndroidManifest.xml:129:1
+	android:name
+		ADDED from AndroidManifest.xml:127:22
+activity#com.simelabs.kmb.spotbeak.BeaconVideoViewActivity
+ADDED from AndroidManifest.xml:130:11
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:131:18
+	android:configChanges
+		ADDED from AndroidManifest.xml:132:1
+	android:name
+		ADDED from AndroidManifest.xml:130:21
+activity#com.simelabs.kmb.locationmap.ImageDisplayActivity
+ADDED from AndroidManifest.xml:133:12
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:134:19
+	android:configChanges
+		ADDED from AndroidManifest.xml:135:1
+	android:name
+		ADDED from AndroidManifest.xml:133:22
+activity#com.simelabs.kmb.locationmap.LocationDetailView
+ADDED from AndroidManifest.xml:136:14
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:137:19
+	android:configChanges
+		ADDED from AndroidManifest.xml:138:1
+	android:name
+		ADDED from AndroidManifest.xml:136:24
+activity#com.simelabs.kmb.locationmap.MapManagerInside
+ADDED from AndroidManifest.xml:139:14
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:140:19
+	android:configChanges
+		ADDED from AndroidManifest.xml:141:1
+	android:name
+		ADDED from AndroidManifest.xml:139:24
+activity#com.simelabs.kmb.spotbeak.Videoview
+ADDED from AndroidManifest.xml:142:15
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:143:19
+	android:configChanges
+		ADDED from AndroidManifest.xml:144:1
+	android:name
+		ADDED from AndroidManifest.xml:142:25
+activity#com.simelabs.kmb.activities.ArtistsDetailPage
+ADDED from AndroidManifest.xml:145:16
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:146:19
+	android:configChanges
+		ADDED from AndroidManifest.xml:147:1
+	android:name
+		ADDED from AndroidManifest.xml:145:26
+activity#com.simelabs.kmb.locationmap.ArtistMap
+ADDED from AndroidManifest.xml:148:16
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:149:19
+	android:configChanges
+		ADDED from AndroidManifest.xml:150:1
+	android:name
+		ADDED from AndroidManifest.xml:148:26
+activity#com.simelabs.kmb.activities.SpotBeakAnimation
+ADDED from AndroidManifest.xml:151:21
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:152:19
+	android:configChanges
+		ADDED from AndroidManifest.xml:153:1
+	android:name
+		ADDED from AndroidManifest.xml:151:31
+service#com.simelabs.kmb.spotbeak.service.BeaconService
+ADDED from AndroidManifest.xml:155:11
+	android:exported
+		ADDED from AndroidManifest.xml:156:14
+	android:name
+		ADDED from AndroidManifest.xml:155:20
+service#com.simelabs.kmb.spotbeak.MyService
+ADDED from AndroidManifest.xml:157:12
+	android:enabled
+		ADDED from AndroidManifest.xml:157:21
+	android:name
+		ADDED from AndroidManifest.xml:157:44
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from AndroidManifest.xml:159:11
+	android:name
+		ADDED from AndroidManifest.xml:159:53
+	android:value
+		ADDED from AndroidManifest.xml:159:22
+activity#com.facebook.LoginActivity
+ADDED from AndroidManifest.xml:160:9
+	android:name
+		ADDED from AndroidManifest.xml:160:19
+meta-data#com.google.android.maps.v2.API_KEY
+ADDED from AndroidManifest.xml:163:9
+	android:name
+		ADDED from AndroidManifest.xml:164:13
+	android:value
+		ADDED from AndroidManifest.xml:165:13
+meta-data#com.google.android.gms.version
+ADDED from AndroidManifest.xml:166:8
+	android:name
+		ADDED from AndroidManifest.xml:166:19
+	android:value
+		ADDED from AndroidManifest.xml:166:65

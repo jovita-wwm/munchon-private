@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:padding="5dp"
+ android:background="@drawable/card_bg"
+    >
+    <RelativeLayout 
+        
+         android:id="@+id/bgpic"
+         android:layout_width="match_parent"
+         android:onClick="displayvenuedetails"
+    android:layout_height="100dp"
+     >
+      </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+           android:background="@drawable/overlay"
+           
+           
+            android:orientation="horizontal" >
+
+            <!--  android:background="@color/black"
+            android:alpha="30" -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:id="@+id/InsideNavigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="OutsideNavigation"
+                    android:src="@drawable/loc_google" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2" >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="Venue"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:id="@+id/OusideNavigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="InsideNavigation"
+                    android:src="@drawable/florricon" />
+            </RelativeLayout>
+        </LinearLayout>
+
+   
+    <!--  android:background="@drawable/layer_card_background" -->
+
+   
+</RelativeLayout>
+<!-- From: file:/F:/Jovita/KMB/beacons/KMB-githubdownload-workspace/KMB/res/layout/location_map_list_item.xml -->

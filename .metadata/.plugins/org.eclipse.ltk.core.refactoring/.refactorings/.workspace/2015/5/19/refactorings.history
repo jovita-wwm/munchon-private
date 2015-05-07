@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 8 resources" deleteContents="false" description="Delete 8 resources" element1="/Actionbar-Sherlock-master" element2="/CircularImageView" element3="/FacebookSDK" element4="/google-play-services_lib" element5="/KMB" element6="/MunchOn" element7="/ResideMenu" element8="/SlidingMenuLib-master" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="8" stamp="1430977452847"/>
+</session>

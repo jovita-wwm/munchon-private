@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" 
+    android:layout_margin="15dp">
+
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="3"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/fullimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="7"
+        android:padding="5dp"
+        android:layout_height="match_parent" 
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/imagename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="Name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/black" />
+            
+        </RelativeLayout>
+
+        
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+               
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                     <TextView
+                         android:id="@+id/imagedesc"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentTop="true"
+                         android:layout_centerHorizontal="true"
+                         android:text="Description"
+                         android:textColor="@android:color/black" />
+                     
+                </RelativeLayout>
+                
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/F:/Jovita/KMB/beacons/KMB-githubdownload-workspace/KMB/res/layout/gallery_fullsize_pic_dialog.xml -->

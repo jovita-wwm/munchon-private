@@ -1,0 +1,1234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+  
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/DimGray"
+        android:layout_weight="9" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Aspinwall House, Fort Kochi" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        
+          
+   <!--  ....................................................map.................................................. -->
+  <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+                     
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                           <ImageView
+                               android:id="@+id/marker"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_alignParentLeft="true"
+                               android:layout_alignParentTop="true"
+                               android:src="@drawable/aspinwall" />
+
+                           <RelativeLayout
+                               android:id="@+id/rlt_iconslist"
+                               android:layout_width="fill_parent"
+                               android:layout_height="fill_parent"
+                               android:layout_alignParentLeft="true"
+                               android:layout_alignParentTop="true"
+                               android:orientation="vertical" >
+
+                              
+                               <ImageView
+                                   android:id="@+id/img_beak1"
+                                   android:tag="1"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentBottom="true"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_marginBottom="103dp"
+                                   android:layout_marginLeft="276dp"
+                                   
+                                   android:src="@drawable/mapmarker" />
+
+                              
+                               
+                               <ImageView
+                                   android:id="@+id/img_beak2"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentBottom="true"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_marginBottom="90dp"
+                                   android:layout_marginLeft="221dp"
+                                   android:src="@drawable/mapmarker"
+                                   android:tag="2" />
+
+                              
+                               <ImageView
+                                   android:id="@+id/img_beak3"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentBottom="true"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_marginBottom="122dp"
+                                   android:layout_marginLeft="218dp"
+                                   android:src="@drawable/mapmarker"
+                                   android:tag="3" />
+
+                              
+                               <ImageView
+                                   android:id="@+id/img_beak5"
+                                   android:tag="5"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentBottom="true"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_marginBottom="166dp"
+                                   android:layout_marginLeft="219dp"
+                                   android:src="@drawable/mapmarker" />
+
+                               
+                               <ImageView
+                                   android:id="@+id/img_beak4"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentBottom="true"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_marginBottom="206dp"
+                                   android:layout_marginLeft="187dp"
+                                   android:src="@drawable/mapmarker"
+                                   android:tag="4" />
+
+                              
+                               <ImageView
+                                   android:id="@+id/img_beak6"
+                                   android:tag="6"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentBottom="true"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_marginBottom="217dp"
+                                   android:layout_marginLeft="216dp"
+                                   android:src="@drawable/mapmarker" />
+
+                              
+                               <ImageView
+                                   android:id="@+id/img_beak7"
+                                   android:tag="7"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentBottom="true"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_marginBottom="256dp"
+                                   android:layout_marginLeft="185dp"
+                                   android:src="@drawable/mapmarker" />
+
+                              
+                               <ImageView
+                                   android:id="@+id/img_beak8"
+                                   android:tag="8"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentBottom="true"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_marginBottom="290dp"
+                                   android:layout_marginLeft="181dp"
+                                   android:src="@drawable/mapmarker" />
+
+                              
+                               <ImageView
+                                   android:id="@+id/img_beak9"
+                                   android:tag="9"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentBottom="true"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_marginBottom="288dp"
+                                   android:layout_marginLeft="212dp"
+                                   android:src="@drawable/mapmarker" />
+
+
+                              
+                               <ImageView
+                                   android:id="@+id/img_beak10"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentBottom="true"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_marginBottom="316dp"
+                                   android:layout_marginLeft="184dp"
+                                   android:src="@drawable/mapmarker"
+                                   android:tag="10" />
+
+                              
+                               <ImageView
+                                   android:id="@+id/img_beak10_1"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:tag="10"
+                                   android:layout_alignParentBottom="true"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_marginBottom="341dp"
+                                   android:layout_marginLeft="207dp"
+                                   android:src="@drawable/mapmarker" />
+
+
+                              
+                               <ImageView
+                                   android:id="@+id/img_beak11"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_alignParentTop="true"
+                                   android:layout_marginLeft="173dp"
+                                   android:layout_marginTop="341dp"
+                                   android:src="@drawable/mapmarker"
+                                   android:tag="11" />
+
+
+                              
+                               <ImageView
+                                   android:id="@+id/img_beak12"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:tag="12"
+                                   android:layout_alignParentBottom="true"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_marginBottom="362dp"
+                                   android:layout_marginLeft="206dp"
+                                   android:src="@drawable/mapmarker" />
+
+                               
+                               <ImageView
+                                   android:id="@+id/img_beak12_1"
+                                   android:tag="12"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_alignParentTop="true"
+                                   android:layout_marginLeft="205dp"
+                                   android:layout_marginTop="356dp"
+                                   android:src="@drawable/mapmarker"
+                                    />
+
+                               
+                                <ImageView
+                                   android:id="@+id/img_beak12_2"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_alignParentTop="true"
+                                   android:layout_marginLeft="205dp"
+                                   android:layout_marginTop="336dp"
+                                   android:src="@drawable/mapmarker"
+                                   android:tag="12" />
+
+                              
+                               <ImageView
+                                   android:id="@+id/img_beak13"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentBottom="true"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_marginBottom="350dp"
+                                   android:layout_marginLeft="289dp"
+                                   android:src="@drawable/mapmarker"
+                                   android:tag="13" />
+
+                               
+                               <ImageView
+                                   android:id="@+id/img_beak14"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_alignParentTop="true"
+                                   android:layout_marginLeft="254dp"
+                                   android:layout_marginTop="244dp"
+                                   android:src="@drawable/mapmarker"
+                                   android:tag="14" />
+
+                              
+                               <ImageView
+                                   android:id="@+id/img_beak15"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_alignParentTop="true"
+                                   android:layout_marginLeft="245dp"
+                                   android:layout_marginTop="211dp"
+                                   android:src="@drawable/mapmarker"
+                                   android:tag="15" />
+
+                              
+                               <ImageView
+                                   android:id="@+id/img_beak16"
+                                   android:layout_width="15dp"
+                                   android:layout_height="15dp"
+                                   android:layout_alignParentLeft="true"
+                                   android:layout_alignParentTop="true"
+                                   android:layout_marginLeft="228dp"
+                                   android:layout_marginTop="170dp"
+                                   android:src="@drawable/mapmarker"
+                                   android:tag="16" />
+
+									
+                                   <ImageView
+                                       android:id="@+id/img_beak17"
+                                       android:layout_width="15dp"
+                                       android:layout_height="15dp"
+                                       android:layout_alignParentLeft="true"
+                                       android:layout_alignParentTop="true"
+                                       android:layout_marginLeft="217dp"
+                                       android:layout_marginTop="127dp"
+                                       android:src="@drawable/mapmarker"
+                                       android:tag="17" />
+                                       
+                                      
+
+                                       <ImageView
+                                           android:id="@+id/img_beak18"
+                                           android:layout_width="15dp"
+                                           android:layout_height="15dp"
+                                           android:layout_alignParentLeft="true"
+                                           android:layout_alignParentTop="true"
+                                           android:layout_marginLeft="277dp"
+                                           android:layout_marginTop="142dp"
+                                           android:src="@drawable/mapmarker"
+                                           android:tag="18" />
+
+
+										
+                                           <ImageView
+                                               android:id="@+id/img_beak18_1"
+                                               android:layout_width="15dp"
+                                               android:layout_height="15dp"
+                                               android:layout_alignParentLeft="true"
+                                               android:layout_alignParentTop="true"
+                                               android:layout_marginLeft="277dp"
+                                               android:layout_marginTop="121dp"
+                                               android:src="@drawable/mapmarker"
+                                               android:tag="18" />
+                                               
+                                               
+                                              
+
+
+                                               <ImageView
+                                                   android:id="@+id/img_beak18_2"
+                                                   android:layout_width="15dp"
+                                                   android:layout_height="15dp"
+                                                   android:layout_alignParentLeft="true"
+                                                   android:layout_alignParentTop="true"
+                                                   android:layout_marginLeft="299dp"
+                                                   android:layout_marginTop="115dp"
+                                                   android:src="@drawable/mapmarker"
+                                                   android:tag="18" />
+                                                   
+                                                  
+
+                                                   <ImageView
+                                                       android:id="@+id/img_beak18_3"
+                                                       android:layout_width="15dp"
+                                                       android:layout_height="15dp"
+                                                       android:layout_alignParentLeft="true"
+                                                       android:layout_alignParentTop="true"
+                                                       android:layout_marginLeft="319dp"
+                                                       android:layout_marginTop="108dp"
+                                                       android:src="@drawable/mapmarker"
+                                                       android:tag="18" />
+                                                       
+                                                       
+
+                                                       <ImageView
+                                                           android:id="@+id/img_beak19"
+                                                           android:layout_width="15dp"
+                                                           android:layout_height="15dp"
+                                                           android:layout_alignParentLeft="true"
+                                                           android:layout_alignParentTop="true"
+                                                           android:layout_marginLeft="350dp"
+                                                           android:layout_marginTop="120dp"
+                                                           android:src="@drawable/mapmarker"
+                                                           android:tag="19" />
+                                                           
+                                                         
+
+                                                            <ImageView
+                                                                android:id="@+id/img_beak19_1"
+                                                                android:layout_width="15dp"
+                                                                android:layout_height="15dp"
+                                                                android:layout_alignParentLeft="true"
+                                                                android:layout_alignParentTop="true"
+                                                                android:layout_marginLeft="366dp"
+                                                                android:layout_marginTop="98dp"
+                                                                android:src="@drawable/mapmarker"
+                                                                android:tag="19" />
+                                                                
+                                                                
+
+                                                                <ImageView
+                                                                    android:id="@+id/img_beak20"
+                                                                    android:layout_width="15dp"
+                                                                    android:layout_height="15dp"
+                                                                    android:layout_alignParentLeft="true"
+                                                                    android:layout_alignParentTop="true"
+                                                                    android:layout_marginLeft="390dp"
+                                                                    android:layout_marginTop="76dp"
+                                                                    android:src="@drawable/mapmarker"
+                                                                    android:tag="20" />
+                                                                    
+                                                                  
+
+                                                                     <ImageView
+                                                                         android:id="@+id/img_beak21"
+                                                                         android:layout_width="15dp"
+                                                                         android:layout_height="15dp"
+                                                                         android:layout_alignParentLeft="true"
+                                                                         android:layout_alignParentTop="true"
+                                                                         android:layout_marginLeft="402dp"
+                                                                         android:layout_marginTop="119dp"
+                                                                         android:src="@drawable/mapmarker"
+                                                                         android:tag="21" />
+                                                                         
+                                                                        
+
+                                                                         <ImageView
+                                                                             android:id="@+id/img_beak22"
+                                                                             android:layout_width="15dp"
+                                                                             android:layout_height="15dp"
+                                                                             android:layout_alignParentLeft="true"
+                                                                             android:layout_alignParentTop="true"
+                                                                             android:layout_marginLeft="412dp"
+                                                                             android:layout_marginTop="182dp"
+                                                                             android:src="@drawable/mapmarker"
+                                                                             android:tag="22" />
+                                                                             
+                                                                            
+
+                                                                             <ImageView
+                                                                                 android:id="@+id/img_beak22_1"
+                                                                                 android:layout_width="15dp"
+                                                                                 android:layout_height="15dp"
+                                                                                 android:layout_alignParentLeft="true"
+                                                                                 android:layout_alignParentTop="true"
+                                                                                 android:layout_marginLeft="431dp"
+                                                                                 android:layout_marginTop="177dp"
+                                                                                 android:src="@drawable/mapmarker"
+                                                                                 android:tag="22" />
+                                                                                 
+                                                                                 <ImageView
+                                                                                     android:id="@+id/img_beak23"
+                                                                                     android:layout_width="15dp"
+                                                                                     android:layout_height="15dp"
+                                                                                     android:layout_alignParentLeft="true"
+                                                                                     android:layout_alignParentTop="true"
+                                                                                     android:layout_marginLeft="419dp"
+                                                                                     android:layout_marginTop="157dp"
+                                                                                     android:src="@drawable/mapmarker"
+                                                                                     android:tag="23" />
+																	
+                                                                                      <ImageView
+                                                                                          android:id="@+id/img_beak24"
+                                                                                          android:layout_width="15dp"
+                                                                                          android:layout_height="15dp"
+                                                                                          android:layout_alignParentRight="true"
+                                                                                          android:layout_alignParentTop="true"
+                                                                                          android:layout_marginRight="458dp"
+                                                                                          android:layout_marginTop="108dp"
+                                                                                          android:src="@drawable/mapmarker"
+                                                                                          android:tag="24" />
+
+									
+                                  <ImageView
+                                      android:id="@+id/img_beak25"
+                                      android:layout_width="15dp"
+                                      android:layout_height="15dp"
+                                      android:layout_alignParentRight="true"
+                                      android:layout_alignParentTop="true"
+                                      android:layout_marginRight="410dp"
+                                      android:layout_marginTop="105dp"
+                                      android:src="@drawable/mapmarker"
+                                      android:tag="25" />
+                                      
+                                      
+                                 
+                                   <ImageView
+                                       android:id="@+id/img_beak26"
+                                       android:layout_width="15dp"
+                                       android:layout_height="15dp"
+                                       android:layout_alignParentRight="true"
+                                       android:layout_alignParentTop="true"
+                                       android:layout_marginRight="315dp"
+                                       android:layout_marginTop="108dp"
+                                       android:src="@drawable/mapmarker"
+                                       android:tag="26" />
+                                       
+                                     
+                                     
+                                    
+
+                                     <ImageView
+                                         android:id="@+id/img_beak27"
+                                         android:layout_width="15dp"
+                                         android:layout_height="15dp"
+                                         android:layout_alignParentRight="true"
+                                         android:layout_alignParentTop="true"
+                                         android:layout_marginRight="291dp"
+                                         android:layout_marginTop="63dp"
+                                         android:src="@drawable/mapmarker"
+                                         android:tag="27" />
+                                         
+                                          
+
+                                        <ImageView
+                                            android:id="@+id/img_beak28"
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_alignParentTop="true"
+                                            android:layout_marginRight="178dp"
+                                            android:layout_marginTop="62dp"
+                                            android:src="@drawable/mapmarker"
+                                            android:tag="28" />
+                                            
+                                            
+                                         
+
+                                             <ImageView
+                                                 android:id="@+id/img_beak29"
+                                                 android:layout_width="15dp"
+                                                 android:layout_height="15dp"
+                                                 android:layout_alignParentRight="true"
+                                                 android:layout_alignParentTop="true"
+                                                 android:layout_marginRight="136dp"
+                                                 android:layout_marginTop="95dp"
+                                                 android:src="@drawable/mapmarker"
+                                                 android:tag="29" />
+                                                 
+                                               
+
+                                            <ImageView
+                                                android:id="@+id/img_beak30"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_marginRight="238dp"
+                                                android:layout_marginTop="176dp"
+                                                android:src="@drawable/mapmarker"
+                                                android:tag="30" />
+                                                
+                                                
+                                            
+
+                                              <ImageView
+                                                  android:id="@+id/img_beak31"
+                                                  android:layout_width="15dp"
+                                                  android:layout_height="15dp"
+                                                  android:layout_alignParentRight="true"
+                                                  android:layout_alignParentTop="true"
+                                                  android:layout_marginRight="239dp"
+                                                  android:layout_marginTop="291dp"
+                                                  android:src="@drawable/mapmarker"
+                                                  android:tag="31" />
+                                                  
+                                              
+
+                                               <ImageView
+                                                   android:id="@+id/img_beak32"
+                                                   android:layout_width="15dp"
+                                                   android:layout_height="15dp"
+                                                   android:layout_alignParentRight="true"
+                                                   android:layout_alignParentTop="true"
+                                                   android:layout_marginRight="218dp"
+                                                   android:layout_marginTop="99dp"
+                                                   android:src="@drawable/mapmarker"
+                                                   android:tag="32" />
+
+								
+ 									<ImageView
+ 									    android:id="@+id/img_beak33"
+ 									    android:layout_width="15dp"
+ 									    android:layout_height="15dp"
+ 									    android:layout_alignParentRight="true"
+ 									    android:layout_alignParentTop="true"
+ 									    android:layout_marginRight="220dp"
+ 									    android:layout_marginTop="120dp"
+ 									    android:src="@drawable/mapmarker"
+ 									    android:tag="33" />
+ 									    
+ 									    
+ 									  
+
+ 									  <ImageView
+ 									      android:id="@+id/img_beak34"
+ 									      android:layout_width="15dp"
+ 									      android:layout_height="15dp"
+ 									      android:layout_alignParentRight="true"
+ 									      android:layout_alignParentTop="true"
+ 									      android:layout_marginRight="176dp"
+ 									      android:layout_marginTop="108dp"
+ 									      android:src="@drawable/mapmarker"
+ 									      android:tag="34" />
+ 									      
+ 									      
+
+ 									  <ImageView
+ 									      android:id="@+id/img_beak36"
+ 									      android:layout_width="15dp"
+ 									      android:layout_height="15dp"
+ 									      android:layout_alignParentRight="true"
+ 									      android:layout_alignParentTop="true"
+ 									      android:layout_marginRight="185dp"
+ 									      android:layout_marginTop="166dp"
+ 									      android:src="@drawable/mapmarker"
+ 									      android:tag="36" />
+ 									      
+ 									    
+
+ 									     <ImageView
+ 									         android:id="@+id/img_beak36_1"
+ 									         android:layout_width="15dp"
+ 									         android:layout_height="15dp"
+ 									         android:layout_alignParentRight="true"
+ 									         android:layout_alignParentTop="true"
+ 									         android:layout_marginRight="185dp"
+ 									         android:layout_marginTop="184dp"
+ 									         android:src="@drawable/mapmarker"
+ 									         android:tag="36" />
+ 									         
+ 									         
+ 									         
+ 									      
+
+ 									      <ImageView
+ 									          android:id="@+id/img_beak36_2"
+ 									          android:layout_width="15dp"
+ 									          android:layout_height="15dp"
+ 									          android:layout_alignParentRight="true"
+ 									          android:layout_alignParentTop="true"
+ 									          android:layout_marginRight="185dp"
+ 									          android:layout_marginTop="204dp"
+ 									          android:src="@drawable/mapmarker"
+ 									          android:tag="36" />
+ 									          
+ 									          
+ 									          
+
+ 									       <ImageView
+ 									           android:id="@+id/img_beak37"
+ 									           android:layout_width="15dp"
+ 									           android:layout_height="15dp"
+ 									           android:layout_alignParentRight="true"
+ 									           android:layout_alignParentTop="true"
+ 									           android:layout_marginRight="186dp"
+ 									           android:layout_marginTop="250dp"
+ 									           android:src="@drawable/mapmarker"
+ 									           android:tag="37" />
+ 									           
+ 									           
+ 									          
+
+ 									            <ImageView
+ 									                android:id="@+id/img_beak38"
+ 									                android:layout_width="15dp"
+ 									                android:layout_height="15dp"
+ 									                android:layout_alignParentRight="true"
+ 									                android:layout_alignParentTop="true"
+ 									                android:layout_marginRight="185dp"
+ 									                android:layout_marginTop="301dp"
+ 									                android:src="@drawable/mapmarker"
+ 									                android:tag="38" />
+ 									                
+ 									                
+ 									            
+
+ 									              <ImageView
+ 									                  android:id="@+id/img_beak39"
+ 									                  android:layout_width="15dp"
+ 									                  android:layout_height="15dp"
+ 									                  android:layout_alignParentRight="true"
+ 									                  android:layout_alignParentTop="true"
+ 									                  android:layout_marginRight="208dp"
+ 									                  android:layout_marginTop="293dp"
+ 									                  android:src="@drawable/mapmarker"
+ 									                  android:tag="39" />
+ 									                  
+ 									                 
+
+ 									                <ImageView
+ 									                    android:id="@+id/img_beak35"
+ 									                    android:layout_width="15dp"
+ 									                    android:layout_height="15dp"
+ 									                    android:layout_alignParentRight="true"
+ 									                    android:layout_alignParentTop="true"
+ 									                    android:layout_marginRight="160dp"
+ 									                    android:layout_marginTop="170dp"
+ 									                    android:src="@drawable/mapmarker"
+ 									                    android:tag="35" />
+ 									                    
+ 									                    
+ 									                
+
+ 									                  <ImageView
+ 									                      android:id="@+id/img_beak42"
+ 									                      android:layout_width="15dp"
+ 									                      android:layout_height="15dp"
+ 									                      android:layout_alignParentRight="true"
+ 									                      android:layout_alignParentTop="true"
+ 									                      android:layout_marginRight="158dp"
+ 									                      android:layout_marginTop="194dp"
+ 									                      android:src="@drawable/mapmarker"
+ 									                      android:tag="42" />
+ 									                      
+ 							
+
+ 								<ImageView
+ 								    android:id="@+id/img_beak40"
+ 								    android:layout_width="15dp"
+ 								    android:layout_height="15dp"
+ 								    android:layout_alignParentRight="true"
+ 								    android:layout_alignParentTop="true"
+ 								    android:layout_marginRight="144dp"
+ 								    android:layout_marginTop="225dp"
+ 								    android:src="@drawable/mapmarker"
+ 								    android:tag="40" />
+ 								    
+ 								    
+ 						
+
+ 							<ImageView
+ 							    android:id="@+id/img_beak41"
+ 							    android:layout_width="15dp"
+ 							    android:layout_height="15dp"
+ 							    android:layout_alignParentRight="true"
+ 							    android:layout_alignParentTop="true"
+ 							    android:layout_marginRight="124dp"
+ 							    android:layout_marginTop="225dp"
+ 							    android:src="@drawable/mapmarker"
+ 							    android:tag="41" />
+ 							    
+ 							    
+ 							  
+
+ 							  <ImageView
+ 							      android:id="@+id/img_beak42_1"
+ 							      android:layout_width="15dp"
+ 							      android:layout_height="15dp"
+ 							      android:layout_alignParentRight="true"
+ 							      android:layout_alignParentTop="true"
+ 							      android:layout_marginRight="132dp"
+ 							      android:layout_marginTop="199dp"
+ 							      android:src="@drawable/mapmarker"
+ 							      android:tag="42" />
+ 							      
+ 							      
+ 							   
+
+ 							       <ImageView
+ 							           android:id="@+id/img_beak43"
+ 							           android:layout_width="15dp"
+ 							           android:layout_height="15dp"
+ 							           android:layout_alignParentRight="true"
+ 							           android:layout_alignParentTop="true"
+ 							           android:layout_marginRight="136dp"
+ 							           android:layout_marginTop="142dp"
+ 							           android:src="@drawable/mapmarker"
+ 							           android:tag="43" />
+
+
+
+ 							        <ImageView
+ 							            android:id="@+id/img_beak44"
+ 							            android:layout_width="15dp"
+ 							            android:layout_height="15dp"
+ 							            android:layout_alignParentBottom="true"
+ 							            android:layout_alignParentRight="true"
+ 							            android:layout_marginBottom="357dp"
+ 							            android:layout_marginRight="234dp"
+ 							            android:src="@drawable/mapmarker"
+ 							            android:tag="44" />
+ 							            
+ 							            
+ 							          
+ 							            <ImageView
+ 							                android:id="@+id/img_beak44_1"
+ 							                android:layout_width="15dp"
+ 							                android:layout_height="15dp"
+ 							                android:layout_alignParentBottom="true"
+ 							                android:layout_alignParentRight="true"
+ 							                android:layout_marginBottom="333dp"
+ 							                android:layout_marginRight="235dp"
+ 							                android:src="@drawable/mapmarker"
+ 							                android:tag="44" />
+ 							                
+ 							               
+
+ 							                <ImageView
+ 							                    android:id="@+id/img_beak45"
+ 							                    android:layout_width="15dp"
+ 							                    android:layout_height="15dp"
+ 							                    android:layout_alignParentBottom="true"
+ 							                    android:layout_alignParentRight="true"
+ 							                    android:layout_marginBottom="354dp"
+ 							                    android:layout_marginRight="208dp"
+ 							                    android:src="@drawable/mapmarker"
+ 							                    android:tag="45" />
+ 							                    
+ 							                   
+
+ 							                     <ImageView
+ 							                         android:id="@+id/img_beak46"
+ 							                         android:layout_width="15dp"
+ 							                         android:layout_height="15dp"
+ 							                         android:layout_alignParentBottom="true"
+ 							                         android:layout_alignParentRight="true"
+ 							                         android:layout_marginBottom="350dp"
+ 							                         android:layout_marginRight="184dp"
+ 							                         android:src="@drawable/mapmarker"
+ 							                         android:tag="46" />
+ 							                         
+ 							                         
+ 							                     
+
+ 							                         <ImageView
+ 							                             android:id="@+id/img_beak47"
+ 							                             android:layout_width="15dp"
+ 							                             android:layout_height="15dp"
+ 							                             android:layout_alignParentBottom="true"
+ 							                             android:layout_alignParentRight="true"
+ 							                             android:layout_marginBottom="327dp"
+ 							                             android:layout_marginRight="198dp"
+ 							                             android:src="@drawable/mapmarker"
+ 							                             android:tag="47" />
+ 							                             
+ 							                             
+ 							                            
+
+ 							                          <ImageView
+ 							                              android:id="@+id/img_beak48"
+ 							                              android:layout_width="15dp"
+ 							                              android:layout_height="15dp"
+ 							                              android:layout_alignParentBottom="true"
+ 							                              android:layout_alignParentRight="true"
+ 							                              android:layout_marginBottom="250dp"
+ 							                              android:layout_marginRight="197dp"
+ 							                              android:src="@drawable/mapmarker"
+ 							                              android:tag="48" />
+ 							                              
+ 							                              
+ 							                            
+
+ 							                         <ImageView
+ 							                             android:id="@+id/img_beak49"
+ 							                             android:layout_width="15dp"
+ 							                             android:layout_height="15dp"
+ 							                             android:layout_alignParentBottom="true"
+ 							                             android:layout_alignParentRight="true"
+ 							                             android:layout_marginBottom="267dp"
+ 							                             android:layout_marginRight="271dp"
+ 							                             android:src="@drawable/mapmarker"
+ 							                             android:tag="49" />
+ 							                             
+ 							                             
+ 							                          
+ 							                          <ImageView
+ 							                              android:id="@+id/img_beak50"
+ 							                              android:layout_width="15dp"
+ 							                              android:layout_height="15dp"
+ 							                              android:layout_alignParentBottom="true"
+ 							                              android:layout_alignParentRight="true"
+ 							                              android:layout_marginBottom="250dp"
+ 							                              android:layout_marginRight="286dp"
+ 							                              android:src="@drawable/mapmarker"
+ 							                              android:tag="50" />
+ 							                              
+ 							                              
+ 							                            
+
+ 							                           <ImageView
+ 							                               android:id="@+id/img_beak51"
+ 							                               android:layout_width="15dp"
+ 							                               android:layout_height="15dp"
+ 							                               android:layout_alignParentBottom="true"
+ 							                               android:layout_alignParentRight="true"
+ 							                               android:layout_marginBottom="227dp"
+ 							                               android:layout_marginRight="307dp"
+ 							                               android:src="@drawable/mapmarker"
+ 							                               android:tag="51" />
+ 							                               
+ 							                               
+ 							                               
+ 							                             
+ 							                            <ImageView
+ 							                                android:id="@+id/img_beak52"
+ 							                                android:layout_width="15dp"
+ 							                                android:layout_height="15dp"
+ 							                                android:layout_alignParentBottom="true"
+ 							                                android:layout_alignParentRight="true"
+ 							                                android:layout_marginBottom="206dp"
+ 							                                android:layout_marginRight="289dp"
+ 							                                android:src="@drawable/mapmarker"
+ 							                                android:tag="52" />
+ 							                                
+ 							                                
+ 							                                
+ 							                             
+ 							                            <ImageView
+ 							                                android:id="@+id/img_beak53"
+ 							                                android:layout_width="15dp"
+ 							                                android:layout_height="15dp"
+ 							                                android:layout_alignParentBottom="true"
+ 							                                android:layout_alignParentRight="true"
+ 							                                android:layout_marginBottom="210dp"
+ 							                                android:layout_marginRight="327dp"
+ 							                                android:src="@drawable/mapmarker"
+ 							                                android:tag="53" />
+ 							                                
+ 							                                
+ 					
+ 						 <ImageView
+ 						     android:id="@+id/img_beak53_1"
+ 						     android:layout_width="15dp"
+ 						     android:layout_height="15dp"
+ 						     android:layout_alignParentBottom="true"
+ 						     android:layout_alignParentRight="true"
+ 						     android:layout_marginBottom="190dp"
+ 						     android:layout_marginRight="349dp"
+ 						     android:src="@drawable/mapmarker"
+ 						     android:tag="53" />
+ 									
+ 									 
+ 									 
+ 									 
+ 									
+ 									 <ImageView
+ 									     android:id="@+id/img_beak68"
+ 									     android:layout_width="15dp"
+ 									     android:layout_height="15dp"
+ 									     android:layout_alignParentBottom="true"
+ 									     android:layout_alignParentRight="true"
+ 									     android:layout_marginBottom="109dp"
+ 									     android:layout_marginRight="327dp"
+ 									     android:src="@drawable/mapmarker"
+ 									     android:tag="68" />
+ 									     
+ 									     
+ 									     
+ 									  
+
+ 									  <ImageView
+ 									      android:id="@+id/img_beak69"
+ 									      android:layout_width="15dp"
+ 									      android:layout_height="15dp"
+ 									      android:layout_alignParentBottom="true"
+ 									      android:layout_alignParentRight="true"
+ 									      android:layout_marginBottom="114dp"
+ 									      android:layout_marginRight="376dp"
+ 									      android:src="@drawable/mapmarker"
+ 									      android:tag="69" />
+ 									      
+ 									      
+ 									    
+ 									      
+
+ 									   <ImageView
+ 									       android:id="@+id/img_beak67"
+ 									       android:layout_width="15dp"
+ 									       android:layout_height="15dp"
+ 									       android:layout_alignParentBottom="true"
+ 									       android:layout_alignParentRight="true"
+ 									       android:layout_marginBottom="68dp"
+ 									       android:layout_marginRight="403dp"
+ 									       android:src="@drawable/mapmarker"
+ 									       android:tag="67" />
+ 									       
+ 									       
+ 									  
+
+ 									     <ImageView
+ 									         android:id="@+id/img_beak66"
+ 									         android:layout_width="15dp"
+ 									         android:layout_height="15dp"
+ 									         android:layout_alignParentBottom="true"
+ 									         android:layout_alignParentRight="true"
+ 									         android:layout_marginBottom="85dp"
+ 									         android:layout_marginRight="332dp"
+ 									         android:src="@drawable/mapmarker"
+ 									         android:tag="66" />
+
+
+ 
+ 
+ 
+
+  <ImageView
+      android:id="@+id/img_beak65"
+      android:layout_width="15dp"
+      android:layout_height="15dp"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentRight="true"
+      android:layout_marginBottom="59dp"
+      android:layout_marginRight="325dp"
+      android:src="@drawable/mapmarker"
+      android:tag="65" />
+      
+      
+      
+    
+
+    <ImageView
+        android:id="@+id/img_beak64"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="69dp"
+        android:layout_marginRight="282dp"
+        android:src="@drawable/mapmarker"
+        android:tag="64" />
+        
+        
+        
+
+      <ImageView
+          android:id="@+id/img_beak63"
+          android:layout_width="15dp"
+          android:layout_height="15dp"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentRight="true"
+          android:layout_marginBottom="112dp"
+          android:layout_marginRight="291dp"
+          android:src="@drawable/mapmarker"
+          android:tag="63" />
+          
+          
+         
+
+         <ImageView
+             android:id="@+id/img_beak62"
+             android:layout_width="15dp"
+             android:layout_height="15dp"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentRight="true"
+             android:layout_marginBottom="127dp"
+             android:layout_marginRight="267dp"
+             android:src="@drawable/mapmarker"
+             android:tag="62" />
+             
+             
+             
+              
+
+             <ImageView
+                 android:id="@+id/img_beak61"
+                 android:layout_width="15dp"
+                 android:layout_height="15dp"
+                 android:layout_alignParentBottom="true"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginBottom="162dp"
+                 android:layout_marginRight="278dp"
+                 android:src="@drawable/mapmarker"
+                 android:tag="61" />
+                 
+                 
+              <ImageView
+                  android:id="@+id/img_beak60"
+                  android:layout_width="15dp"
+                  android:layout_height="15dp"
+                  android:layout_alignParentBottom="true"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginBottom="153dp"
+                  android:layout_marginRight="249dp"
+                  android:src="@drawable/mapmarker"
+                  android:tag="60" />
+                  
+                  
+                 
+
+               <ImageView
+                   android:id="@+id/img_beak59"
+                   android:layout_width="15dp"
+                   android:layout_height="15dp"
+                   android:layout_alignParentBottom="true"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginBottom="187dp"
+                   android:layout_marginRight="254dp"
+                   android:src="@drawable/mapmarker"
+                   android:tag="59" />
+                   
+                   
+                   
+                   
+                   <ImageView
+                       android:id="@+id/img_beak58"
+                       android:layout_width="15dp"
+                       android:layout_height="15dp"
+                       android:layout_alignParentBottom="true"
+                       android:layout_alignParentRight="true"
+                       android:layout_marginBottom="169dp"
+                       android:layout_marginRight="234dp"
+                       android:src="@drawable/mapmarker"
+                       android:tag="58" />
+                       
+                       
+                      
+
+                  <ImageView
+                      android:id="@+id/img_beak58_2"
+                      android:layout_width="15dp"
+                      android:layout_height="15dp"
+                      android:layout_alignParentBottom="true"
+                      android:layout_alignParentRight="true"
+                      android:layout_marginBottom="181dp"
+                      android:layout_marginRight="219dp"
+                      android:src="@drawable/mapmarker"
+                      android:tag="58" />
+                      
+                      
+                     
+                      <ImageView
+                          android:id="@+id/img_beak58_1"
+                          android:layout_width="15dp"
+                          android:layout_height="15dp"
+                          android:layout_alignParentBottom="true"
+                          android:layout_alignParentRight="true"
+                          android:layout_marginBottom="194dp"
+                          android:layout_marginRight="207dp"
+                          android:src="@drawable/mapmarker"
+                          android:tag="58" />
+                          
+                          
+                          
+
+                      <ImageView
+                          android:id="@+id/img_beak57"
+                          android:layout_width="15dp"
+                          android:layout_height="15dp"
+                          android:layout_alignParentBottom="true"
+                          android:layout_alignParentRight="true"
+                          android:layout_marginBottom="208dp"
+                          android:layout_marginRight="236dp"
+                          android:src="@drawable/mapmarker"
+                          android:tag="57" />
+                          
+                          
+                         
+
+                       <ImageView
+                           android:id="@+id/img_beak57_1"
+                           android:layout_width="15dp"
+                           android:layout_height="15dp"
+                           android:layout_alignParentBottom="true"
+                           android:layout_alignParentRight="true"
+                           android:layout_marginBottom="224dp"
+                           android:layout_marginRight="222dp"
+                           android:src="@drawable/mapmarker"
+                           android:tag="57" />
+                          
+
+                        <ImageView
+                            android:id="@+id/img_beak12_3"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="208dp"
+                            android:layout_marginRight="184dp"
+                            android:src="@drawable/mapmarker"
+                            android:tag="12" />
+
+
+
+<ImageView
+    android:id="@+id/img_beak54"
+    android:layout_width="15dp"
+    android:layout_height="15dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginBottom="194dp"
+    android:layout_marginRight="148dp"
+    android:src="@drawable/mapmarker"
+    android:tag="54" />
+
+<ImageView
+    android:id="@+id/img_beak55"
+    android:layout_width="15dp"
+    android:layout_height="15dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginBottom="269dp"
+    android:layout_marginRight="148dp"
+    android:src="@drawable/mapmarker"
+    android:tag="55" />
+
+    <ImageView
+        android:id="@+id/img_beak56"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="294dp"
+        android:layout_marginRight="188dp"
+        android:src="@drawable/mapmarker"
+        android:tag="56" />
+        
+        
+        
+        
+
+  </RelativeLayout>
+
+                    </RelativeLayout>
+                    
+                
+                    
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+    
+    <!--   ........................................map........................................ -->
+        
+        
+        
+    </LinearLayout>
+
+</LinearLayout>

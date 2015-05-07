@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;" name="viewport">
+	<style>
+		
+			/* base */
+			html { -webkit-text-size-adjust:none; }
+			* { margin:0; padding:0; font-family:Helvetica, "Trebuchet MS", arial, sans-serif; }
+		
+			/* title */
+			h1 { font-size:1.4em; color:#006600; letter-spacing:-1px; }
+			h2 { margin:30px 0 12px 0; padding:15px 0 0 0; font-size:1.3em; color:#004970; background:url("img/background.jpg") 0 0 repeat-x; }
+			h3 { margin:0 0 5px 0; font-size:1.1em; color:#005d9a; }
+			h4 { margin:0 0 5px 0; padding:5px 0 0 0; font-weight:normal; font-size:1em; color:#017aa7; }
+			h11 { margin:0 0 5px 0; padding:5px 0 0 0; font-weight:normal; font-size:13px; color:#000000;}
+			h5 { margin:0 0 5px 0; padding:5px 0 0 0; font-weight:bold; font-size:14px; color:#028abc;}
+			
+			
+		
+			/* layout */
+			#content { padding:20px; }
+			#loading {
+	position:absolute;
+	width:100%;
+	text-align:center;
+	top:705px;
+	left: 2px;
+}		
+				#loading img { border:0; }
+		
+			/* styles */		
+			p { margin:0 0 10px 0; color:#222222; line-height:18px; font-size:0.9em; }
+				p a, a { color:#004970; text-decoration:none; border-bottom:1px dotted #004970; }
+			ul { margin:0 0 20px 0; list-style-type:circle; }
+				ul li {	margin:0 0 3px 15px; padding:0; color:#222222; line-height:15px; font-size:0.8em; }
+				ul li span { font-weight:bold; }
+.style2 {
+	color: #028abc;
+	font-size: 14px;
+	font-weight: bold;
+}
+    </style>
+    <title></title>
+	</head>
+	<body onLoad="init()">
+		<div id="loading"><img src="loading.gif"></div>
+<script>
+			var ld=(document.all);
+			var ns4=document.layers;
+			var ns6=document.getElementById&&!document.all;
+			var ie4=document.all;
+			if (ns4)
+			ld=document.loading;
+			else if (ns6)
+			ld=document.getElementById("loading").style;
+			else if (ie4)
+			ld=document.all.loading.style;
+			function init()
+			{
+				if(ns4){ ld.visibility="hidden"; }
+				else if (ns6||ie4) ld.display="none";
+			}
+		</script>
+		<div id="content">
+          <h1>News, Videos and Updates </h1>
+          
+		  <article>
+          <h2>2014-09-03 10:45:00</h2>
+            
+            
+          <article>
+		  
+		  
+		</div>
+	</body>
+</html>

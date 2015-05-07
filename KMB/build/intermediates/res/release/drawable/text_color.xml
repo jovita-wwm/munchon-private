@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:state_pressed="false"
+    android:color="#ffffff" />
+<item
+    android:state_pressed="true"
+    android:color="#B40404" />
+ </selector><!-- From: file:/F:/Jovita/KMB/beacons/KMB-githubdownload-workspace/ResideMenu/res/drawable/text_color.xml --><!-- From: file:/F:/Jovita/KMB/beacons/KMB-githubdownload-workspace/KMB/build/intermediates/exploded-aar/KMB-githubdownload-workspace/ResideMenu/unspecified/res/drawable/text_color.xml -->

@@ -1,0 +1,564 @@
+{
+   "artists":{
+      "items":[
+         {
+            "name":"Adrian Paci",
+            "description":"Born in 1969 in Shkodër, Albania. Lives and works in Milan, Italy.",
+            "details":"",
+            "artistid":"11"
+         },
+         {
+            "name":"Aji VN",
+            "description":"Born in 1968 in Kallissery, India. Lives and works in Rotterdam, the Netherlands.",
+            "details":"",
+            "artistid":"9"
+         },
+         {
+            "name":"Akbar Padamsee",
+            "description":" Born in 1928 in Mumbai, India. Lives and works in Mumbai",
+            "details":"",
+            "artistid":"56"
+         },
+         {
+            "name":"Andrew Ananda Voogel",
+            "description":"Born in 1983 in Los Angeles, USA. Lives and works in San Francisco, USA.",
+            "details":"",
+            "artistid":"68"
+         },
+         {
+            "name":"Annie Wan Lai-Kuen",
+            "description":"Born in 1961 in Hong Kong, China. Lives and works in Hong Kong.",
+            "details":"",
+            "artistid":"92"
+         },
+         {
+            "name":"Aram Saroyan",
+            "description":"Born in 1943 in New York, USA. Lives and works in Los Angeles, USA.",
+            "details":"",
+            "artistid":"2"
+         },
+         {
+            "name":"Arun KS",
+            "description":"Born 1984 in Thrissur, India. Lives and works in Vadodara, India.",
+            "details":"",
+            "artistid":"87"
+         },
+         {
+            "name":"Benitha Perciyal",
+            "description":"Born in 1978 in Vellore, India. Lives and works in Chennai, India.",
+            "details":"",
+            "artistid":"73"
+         },
+         {
+            "name":"Bharti Kher",
+            "description":"Born in 1969 in London, UK. Lives and works in New Delhi, India.",
+            "details":"",
+            "artistid":"76"
+         },
+         {
+            "name":"Bijoy Jain",
+            "description":"Born in 1965 in Mumbai, India. Lives and works in Mumbai.",
+            "details":"",
+            "artistid":"86"
+         },
+         {
+            "name":"Biju Joze",
+            "description":"Born in 1972 in Bengaluru, India. Lives and works in Bengaluru.",
+            "details":"",
+            "artistid":"49"
+         },
+         {
+            "name":"Charles and Ray Eames",
+            "description":"Charles Eames (1907-78) and Ray Eames (1912-88) lived and worked in California, USA.",
+            "details":"",
+            "artistid":"1"
+         },
+         {
+            "name":"Chen Chieh-Jen",
+            "description":"Born in 1960 in Taoyuan, Taiwan. Lives and works in Taipei, Taiwan.",
+            "details":"",
+            "artistid":"43"
+         },
+         {
+            "name":"Christian Waldvogel",
+            "description":"Born in 1971 in Austin, USA. Lives and works in Zurich, Switzerland.",
+            "details":"",
+            "artistid":"27"
+         },
+         {
+            "name":"Daniel Boyd",
+            "description":"Born in 1982 in Cairns, Australia. Lives and works in Sydney, Australia.",
+            "details":"",
+            "artistid":"93"
+         },
+         {
+            "name":"David Horvitz",
+            "description":"Born in 1981 in Austin, USA. Lives and works in Brooklyn, New York, USA.",
+            "details":"",
+            "artistid":"7"
+         },
+         {
+            "name":"Dayanita Singh",
+            "description":"Born in 1961 in New Delhi, India. Lives and works in New Delhi.",
+            "details":"",
+            "artistid":"69"
+         },
+         {
+            "name":"Dinh Q Lê",
+            "description":"Born in 1968 in Ha Tien, Vietnam. Lives and works in Ho Chi Minh City, Vietnam.",
+            "details":"",
+            "artistid":"47"
+         },
+         {
+            "name":"Fiona Hall",
+            "description":"Born in 1953 in Sydney, Australia. Lives and works in Adelaide, Australia.",
+            "details":"",
+            "artistid":"64"
+         },
+         {
+            "name":"Francesco Clemente",
+            "description":"Born in 1952 in Naples, Italy. Lives and works in Rome, Italy, New York, USA, and Chennai, India.",
+            "details":"",
+            "artistid":"55"
+         },
+         {
+            "name":"Gigi Scaria",
+            "description":"Born in 1973 in Kothanalloor, India. Lives and works in New Delhi, India.",
+            "details":"",
+            "artistid":"74"
+         },
+         {
+            "name":"Guido van der Werve",
+            "description":"Born in 1977 in Papendrecht, the Netherlands. Lives and works in Amsterdam, the Netherlands, Berlin, Germany, and Finland.",
+            "details":"",
+            "artistid":"83"
+         },
+         {
+            "name":"Gulammohammed Sheikh",
+            "description":"Born in 1937 in Surendranagar, India. Lives and works in Vadodara, India.",
+            "details":"",
+            "artistid":"80"
+         },
+         {
+            "name":"Hamra Abbas",
+            "description":"orn in 1976 in Kuwait. Lives and works in Lahore, Pakistan and Boston, USA.",
+            "details":"",
+            "artistid":"89"
+         },
+         {
+            "name":"Hans Op de Beeck",
+            "description":"Born in 1969 in Turnhout, Belgium. Lives and works in Brussels, Belgium.",
+            "details":"",
+            "artistid":"44"
+         },
+         {
+            "name":"Hema Upadhyay",
+            "description":"Born in 1972 in Vadodara, India. Lives and works in Mumbai, India.",
+            "details":"",
+            "artistid":"95"
+         },
+         {
+            "name":"Hew Locke",
+            "description":"Born in 1959 in Edinburgh, UK. Lives and works in London, UK.",
+            "details":"",
+            "artistid":"24"
+         },
+         {
+            "name":"Ho Rui An",
+            "description":"Born in 1990 in Singapore. Lives and works in New York, USA and Singapore.",
+            "details":"",
+            "artistid":"59"
+         },
+         {
+            "name":"Ho Tzu Nyen",
+            "description":"Born in 1976 in Singapore. Lives and works in Singapore.",
+            "details":"",
+            "artistid":"67"
+         },
+         {
+            "name":"Iqra Tanveer",
+            "description":"Born in 1983 in Karachi, Pakistan. Lives and works in Lahore, Pakistan.",
+            "details":"",
+            "artistid":"22"
+         },
+         {
+            "name":"Janine Antoni",
+            "description":"Born in 1964 in Freeport, Bahamas. Lives and works in New York, USA.",
+            "details":"",
+            "artistid":"15"
+         },
+         {
+            "name":"Julian Charrière",
+            "description":"Born in 1987 in Morges, Switzerland. Lives and works in Berlin, Germany.",
+            "details":"",
+            "artistid":"94"
+         },
+         {
+            "name":"K G Subramanyan",
+            "description":"Born in 1924 in Kuthuparamba, India. Lives and works in Vadodara, India.",
+            "details":"",
+            "artistid":"81"
+         },
+         {
+            "name":"K M Vasudevan Namboodiri",
+            "description":"Born in 1925 in Ponnani, India.Lives and works in Edappal, India.",
+            "details":"",
+            "artistid":"39"
+         },
+         {
+            "name":"Kader Attia",
+            "description":"Born in 1970 in Dugny, France. Lives and works in Berlin, Germany and Algiers, Algeria.",
+            "details":"",
+            "artistid":"37"
+         },
+         {
+            "name":"Katie Paterson",
+            "description":"Born in 1981 in Glasgow, Scotland. Lives and works in Berlin, Germany.",
+            "details":"",
+            "artistid":"21"
+         },
+         {
+            "name":"Khalil Rabah",
+            "description":"Born in 1961 in Jerusalem. Lives and works in Ramallah, Palestine.",
+            "details":"",
+            "artistid":"41"
+         },
+         {
+            "name":"Kwan Sheung Chi",
+            "description":"Born in 1980 in Hong Kong, China. Lives and works in Hong Kong.",
+            "details":"",
+            "artistid":"57"
+         },
+         {
+            "name":"Laurent Grasso",
+            "description":"Born in 1972 in Mulhouse, France. Lives and works in Paris, France and New York, USA.",
+            "details":"",
+            "artistid":"66"
+         },
+         {
+            "name":"Lavanya Mani",
+            "description":"Born in 1977 in Hyderabad, India. Lives and works in Vadodara, India.",
+            "details":"",
+            "artistid":"17"
+         },
+         {
+            "name":"Lindy Lee",
+            "description":"Born in 1954 in Brisbane, Australia. Lives and works in Sydney, Australia.",
+            "details":"",
+            "artistid":"53"
+         },
+         {
+            "name":"Madhusudhanan",
+            "description":"Born in 1956 in Alappuzha, India. Lives and works in New Delhi and Kerala, India.",
+            "details":"",
+            "artistid":"6"
+         },
+         {
+            "name":"Manish Nai",
+            "description":"Born in 1980 in Laxman Pura, India. Lives in Mumbai, India.",
+            "details":"",
+            "artistid":"45"
+         },
+         {
+            "name":"Marie Velardi",
+            "description":"Born in 1977 in Geneva, Switzerland. Lives and works in Geneva and Paris, France.",
+            "details":"",
+            "artistid":"8"
+         },
+         {
+            "name":"Mark Formanek",
+            "description":"Born in 1967 in Pinneberg, Germany. Lives and works in Berlin, Germany",
+            "details":"",
+            "artistid":"16"
+         },
+         {
+            "name":"Mark Wallinger",
+            "description":"Born in 1959 in Chigwell, UK. Lives and works in London, UK.",
+            "details":"",
+            "artistid":"90"
+         },
+         {
+            "name":"Martin Creed",
+            "description":"Born in 1968 in Wakefield, UK. Lives and works in London, UK.",
+            "details":"",
+            "artistid":"91"
+         },
+         {
+            "name":"Menika van der Poorten",
+            "description":"Born in 1957 in London, UK. Lives and works in Colombo, Sri Lanka.",
+            "details":"",
+            "artistid":"60"
+         },
+         {
+            "name":"Michael Najjar",
+            "description":"Born in 1966 in Landau, Germany. Lives and works in Berlin, Germany.",
+            "details":"",
+            "artistid":"51"
+         },
+         {
+            "name":"Michael Stevens",
+            "description":"Born in 1986 in Kansas City, USA. Lives and works in London, UK.",
+            "details":"",
+            "artistid":"12"
+         },
+         {
+            "name":"Mithu Sen",
+            "description":"Born in 1971 in Burdwan, India. Lives and works in New Delhi, India.",
+            "details":"",
+            "artistid":"38"
+         },
+         {
+            "name":"Mona Hatoum",
+            "description":"Born in 1952 in Beirut, Lebanon. Lives and works in Berlin, Germany, and London, UK.",
+            "details":"",
+            "artistid":"3"
+         },
+         {
+            "name":"Muhanned Cader",
+            "description":"Born in 1966 in Colombo, Sri Lanka. Lives and works in Colombo and London, UK.",
+            "details":"",
+            "artistid":"32"
+         },
+         {
+            "name":"N S Harsha",
+            "description":"Born in 1969 in Mysuru, India. Lives and works in Mysuru.",
+            "details":"",
+            "artistid":"31"
+         },
+         {
+            "name":"Naeem Mohaiemen",
+            "description":"Born in 1969 in London, UK. Lives and works in Dhaka, Bangladesh and New York, USA.",
+            "details":"",
+            "artistid":"97"
+         },
+         {
+            "name":"Nataraj Sharma",
+            "description":"Born in 1958 in Mysuru, India. Lives and works in Vadodara, India.",
+            "details":"",
+            "artistid":"4"
+         },
+         {
+            "name":"Navin Thomas",
+            "description":"Born in 1974 in Chennai, India. Lives and works in Bengaluru, India.",
+            "details":"",
+            "artistid":"77"
+         },
+         {
+            "name":"Navjot Altaf",
+            "description":"Born in 1949 in Meerut, India. Lives and works in Mumbai, India.",
+            "details":"",
+            "artistid":"42"
+         },
+         {
+            "name":"Neha Choksi",
+            "description":"Born in 1973 in New Jersey, USA. Lives and works in Mumbai, India.",
+            "details":"",
+            "artistid":"46"
+         },
+         {
+            "name":"Nikhil Chopra",
+            "description":"Born in 1974 in Allahabad, India. Lives and works in Goa, India.",
+            "details":"",
+            "artistid":"23"
+         },
+         {
+            "name":"Parvathy Nayar",
+            "description":"Born in 1964 in New Delhi, India. Lives and works in Chennai, India.",
+            "details":"",
+            "artistid":"14"
+         },
+         {
+            "name":"Peter Rösel",
+            "description":"Born in 1966 in Rockenhausen, Germany. Lives and works in Berlin, Germany.",
+            "details":"",
+            "artistid":"71"
+         },
+         {
+            "name":"Pors & Rao",
+            "description":"Aparna Rao (born in 1978 in India) and SÃƒÂ¸ren Pors (born in 1974 in Denmark) live and work in Bengaluru, India.",
+            "details":"",
+            "artistid":"25"
+         },
+         {
+            "name":"Prajakta Potnis",
+            "description":"Born in 1980 in Thane, India. Lives and works in Mumbai.",
+            "details":"",
+            "artistid":"75"
+         },
+         {
+            "name":"Prashant Pandey",
+            "description":"Born in 1984 in Jaipur, India. Lives and works in Jaipur.",
+            "details":"",
+            "artistid":"50"
+         },
+         {
+            "name":"Punaloor Rajan",
+            "description":"Lives and Works in Calicut, Kerala, India.",
+            "details":"",
+            "artistid":"52"
+         },
+         {
+            "name":"Pushpamala N",
+            "description":"Born in 1956 in Bengaluru, India. Lives and works in Bengaluru.",
+            "details":"",
+            "artistid":"61"
+         },
+         {
+            "name":"Rafael Lozano-Hemmer",
+            "description":"Born in 1967 in Mexico City, Mexico. Lives and works in Montreal, Canada and Madrid, Spain.",
+            "details":"",
+            "artistid":"82"
+         },
+         {
+            "name":"Raqs Media Collective",
+            "description":"Jeebesh Bagchi born in 1965 in New Delhi, India; Monica Narula born in 1969 in New Delhi; Shuddhabrata Sengupta born in 1968 in New Delhi. They live and work in New Delhi.",
+            "details":"",
+            "artistid":"84"
+         },
+         {
+            "name":"Rivane Neuenschwander",
+            "description":"Born in 1967 in Belo Horizonte, Brazil. Lives and works in Belo Horizonte and London, UK.",
+            "details":"",
+            "artistid":"29"
+         },
+         {
+            "name":"Ryota Kuwakubo",
+            "description":"Born in 1971 in Tochigi Prefecture, Japan. Lives and works in Tokyo, Japan.",
+            "details":"",
+            "artistid":"54"
+         },
+         {
+            "name":"Sachin George Sebastian",
+            "description":"Born in 1985 in Kanhagadu, India. Lives and works in New Delhi, India.",
+            "details":"",
+            "artistid":"40"
+         },
+         {
+            "name":"Sahej Rahal",
+            "description":"Born in 1988 in Mumbai, India. Lives and works in Mumbai.",
+            "details":"",
+            "artistid":"26"
+         },
+         {
+            "name":"Sarnath Banerjee",
+            "description":"Born 1972 in Kolkata, India. Lives and works in Berlin, Germany.",
+            "details":"",
+            "artistid":"103"
+         },
+         {
+            "name":"Shahpour Pouyan",
+            "description":"Born in 1979 in Isfahan, Iran. Lives and works in Tehran, Iran and New York, USA.",
+            "details":"",
+            "artistid":"96"
+         },
+         {
+            "name":"Shanthamani Muddaiah",
+            "description":"Born in 1967 in Mysuru, India. Lives and works in Bengaluru, India.",
+            "details":"",
+            "artistid":"13"
+         },
+         {
+            "name":"Shumon Ahmed",
+            "description":"Born in 1977 in Dhaka, Bangladesh. Lives and works in Dhaka.",
+            "details":"",
+            "artistid":"18"
+         },
+         {
+            "name":"Sissel Tolaas",
+            "description":"Born in 1961 in Stavanger, Norway. Lives and works in Berlin, Germany.",
+            "details":"",
+            "artistid":"35"
+         },
+         {
+            "name":"Sudhir Patwardhan",
+            "description":"Born in 1949 in Pune, India. Lives and works in Thane, India.",
+            "details":"",
+            "artistid":"20"
+         },
+         {
+            "name":"Sumakshi Singh",
+            "description":"Lives and works in New Delhi, India.",
+            "details":"",
+            "artistid":"79"
+         },
+         {
+            "name":"Sunoj D",
+            "description":"Born in 1979 in Pallipuram, India. Lives and works in Bengaluru, India.",
+            "details":"",
+            "artistid":"58"
+         },
+         {
+            "name":"Surendran Nair",
+            "description":"Born in 1956 in Onkkoor, India. Lives and works in Vadodara, India",
+            "details":"",
+            "artistid":"65"
+         },
+         {
+            "name":"Susanta Mandal",
+            "description":"Born in 1956 in Kolkata, India. Lives and works in New Delhi, India.",
+            "details":"",
+            "artistid":"10"
+         },
+         {
+            "name":"Tara Kelton",
+            "description":"Born in 1981 in Arlington, USA. Lives and works in Bengaluru, India.",
+            "details":"",
+            "artistid":"19"
+         },
+         {
+            "name":"Theo Eshetu",
+            "description":"Born in 1958 in London, UK. Lives and works in Berlin, Germany and Rome, Italy. ",
+            "details":"",
+            "artistid":"62"
+         },
+         {
+            "name":"Unnikrishnan C",
+            "description":"Born in 1991 in Pezhumpara, India. Lives and works in Pezhumpara.",
+            "details":"",
+            "artistid":"88"
+         },
+         {
+            "name":"Valsan Koorma Kolleri",
+            "description":"Born in 1953 in Pattiam, India. Lives and works in Pattiam.",
+            "details":"",
+            "artistid":"70"
+         },
+         {
+            "name":"Wendelien van Oldenborgh",
+            "description":"Born in 1962 in Rotterdam, the Netherlands. Lives and works in Rotterdam.",
+            "details":"",
+            "artistid":"36"
+         },
+         {
+            "name":"Willian Kentridge",
+            "description":"Born in 1955 in Johannesburg, South Africa. Lives and works in Johannesburg.",
+            "details":"",
+            "artistid":"99"
+         },
+         {
+            "name":"Wim Delvoye",
+            "description":"Born in 1965 in Wervik, Belgium. Lives and works in Ghent, Belgium and Brighton, UK.",
+            "details":"",
+            "artistid":"85"
+         },
+         {
+            "name":"Xu Bing",
+            "description":"Born in 1955 in Chongqing, China. Lives and works in Beijing, China.",
+            "details":"",
+            "artistid":"28"
+         },
+         {
+            "name":"Yang Zhengzhong",
+            "description":"Born in 1968 in Hangzhou, China. Lives and works in Shanghai, China.",
+            "details":"",
+            "artistid":"5"
+         },
+         {
+            "name":"Yoko Ono",
+            "description":"Born in 1933, in Tokyo, Japan. Lives and works in New York, USA.",
+            "details":"",
+            "artistid":"30"
+         }
+      ]
+   }
+}
