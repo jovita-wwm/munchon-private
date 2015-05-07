@@ -20,7 +20,14 @@ import com.simelabs.munchon.R;
 import android.os.Handler;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PorterDuff.Mode;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
+import android.graphics.RectF;
 import android.widget.ImageView;
 
 public class ImageLoader {
@@ -41,6 +48,7 @@ public class ImageLoader {
     public void GalleryDisplayImage( ImageView imageView,String url)
     {
      
+    	imageViews.put(imageView, url);
         Bitmap bitmap=memoryCache.get(url);
         if(bitmap!=null){
             imageView.setImageBitmap(bitmap);
@@ -48,7 +56,7 @@ public class ImageLoader {
         }
         else
         {
-           // queuePhoto(gd.getImagethumurl(), imageView);
+           queuePhoto(url, imageView);
             imageView.setImageResource(stub_id);
         }
     }
@@ -119,13 +127,13 @@ public class ImageLoader {
             final int REQUIRED_SIZE=70;
             int width_tmp=o.outWidth, height_tmp=o.outHeight;
             int scale=1;
-            while(true){
+           /* while(true){
                 if(width_tmp/2<REQUIRED_SIZE || height_tmp/2<REQUIRED_SIZE)
                     break;
                 width_tmp/=2;
                 height_tmp/=2;
                 scale*=2;
-            }
+            }*/
             
             //decode with inSampleSize
             BitmapFactory.Options o2 = new BitmapFactory.Options();
@@ -165,10 +173,29 @@ public class ImageLoader {
                 if(imageViewReused(photoToLoad))
                     return;
                 Bitmap bmp=getBitmap(photoToLoad.url);
-                memoryCache.put(photoToLoad.url, bmp);
+                
+                Bitmap output = Bitmap.createBitmap(bmp.getWidth(), bmp.getHeight(), Config.ARGB_8888);
+                Canvas canvas = new Canvas(output);
+
+                final int color = 0xff424242;
+                final Paint paint = new Paint();
+                final Rect rect = new Rect(0, 0, bmp.getWidth(), bmp.getHeight());
+                final RectF rectF = new RectF(rect);
+                final float roundPx = 30;
+
+                paint.setAntiAlias(true);
+                canvas.drawARGB(0, 0, 0, 0);
+                paint.setColor(color);
+                canvas.drawRoundRect(rectF, roundPx, roundPx, paint);
+
+                paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
+                canvas.drawBitmap(bmp, rect, rect, paint);
+                
+                
+                memoryCache.put(photoToLoad.url, output);
                 if(imageViewReused(photoToLoad))
                     return;
-                BitmapDisplayer bd=new BitmapDisplayer(bmp, photoToLoad);
+                BitmapDisplayer bd=new BitmapDisplayer(output, photoToLoad);
                 handler.post(bd);
             }catch(Throwable th){
                 th.printStackTrace();

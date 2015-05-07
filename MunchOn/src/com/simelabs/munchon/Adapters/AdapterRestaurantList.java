@@ -98,6 +98,7 @@ public class AdapterRestaurantList extends BaseAdapter
 		 
 		TextView txtTitle = (TextView) rowView.findViewById(R.id.txt_fragment_restaurant_address);
 		 ImageView img=(ImageView)rowView.findViewById(R.id.img_fragment_restaurents_restaurantimage);
+		 ImageView logo=(ImageView)rowView.findViewById(R.id.img_restaurantLogo);
 		TextView status=(TextView)rowView.findViewById(R.id.txt_fragment_restaurant_status);
 		TextView rate=(TextView)rowView.findViewById(R.id.txt_fragment_restaurant_rate);
 		  
@@ -123,13 +124,14 @@ public class AdapterRestaurantList extends BaseAdapter
 
       img.setImageBitmap(output);*/
       String imageurl="https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-060425629624/munchon/gallery/restaurant/";
-
+      String logourl="https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-060425629624/munchon/gallery/restaurantlogo/";
+      
      /* new DownloadImageTask(img)
       .execute(imageurl+restaurants.get(position).getRestaurantImage());
     */
      imageLoader.GalleryDisplayImage(img,imageurl+restaurants.get(position).getRestaurantImage());
       
-      
+     imageLoader.GalleryDisplayImage(logo, logourl+restaurants.get(position).getRestaurantlogo());
       
     	txtTitle.setText(Html.fromHtml("<p><b>"+restaurants.get(position).getName()+"</b></p>"+restaurants.get(position).getShortAddress()));
 		Typeface font = Typeface.createFromAsset(context.getAssets(), "LaoUIb.ttf");

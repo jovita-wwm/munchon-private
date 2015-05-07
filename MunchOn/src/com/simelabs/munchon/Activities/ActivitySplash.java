@@ -1,12 +1,15 @@
 package com.simelabs.munchon.Activities;
 
 
+import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,20 +27,27 @@ import com.simelabs.munchon.DB.Const;
 import com.simelabs.munchon.DB.ServiceRequests;
 import com.simelabs.munchon.Domain.PublicValues;
 import com.simelabs.munchon.Domain.RestaurantDomain;
+import com.simelabs.munchon.Location.GPSTracker;
 import com.simelabs.munchon.Network.Internet;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.bluetooth.BluetoothAdapter;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.Signature;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Base64;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 /**
  * 
@@ -50,7 +60,7 @@ public class ActivitySplash extends Activity{
 
 	private String tag_string_req = "string_req";
 	public ArrayList<RestaurantDomain> allrestuarants=new ArrayList<RestaurantDomain>();
-	String lat="/47.468449",lng="/19.057197";
+	String lat="47.468449",lng="19.057197";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +106,7 @@ Handler handler = new Handler();
 		    		if (!mBluetoothAdapter.isEnabled()) {
 		    		    mBluetoothAdapter.enable(); 
 		    		} 
+		    		getLocation();
 		    		makeStringReq(class1);
 		    	
 		    	}
@@ -121,7 +132,9 @@ Handler handler = new Handler();
 	private void makeStringReq(final Class c) {
 		//showProgressDialog();
 
-		String url=Const.URL_nearby_Restaurants_request+lat+lng;
+		String url=Const.URL_nearby_Restaurants_request+"//"+lat+"//"+lng;
+		Log.i("restaurant request", url);
+		Toast.makeText(getApplicationContext(), url, Toast.LENGTH_SHORT).show();
 		StringRequest strReq = new StringRequest(Method.GET,
 				url, new Response.Listener<String>() {
 
@@ -231,5 +244,30 @@ Handler handler = new Handler();
 		Intent i = new Intent(getApplicationContext(), class1);
 		startActivity(i);
 		ActivitySplash.this.finish();
+	}
+	
+	public void getLocation()
+	{
+		LocationManager	locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		
+		Location location = new Location(locationManager.GPS_PROVIDER);
+		List<Address> addresses = null;
+
+		Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+		String errorMessage = "";
+		
+		GPSTracker gpsTracker = new GPSTracker(ActivitySplash.this);
+		
+		 if (gpsTracker.canGetLocation())
+	        {
+			// String stringLatitude = String.valueOf(gpsTracker.latitude);
+			// String stringLongitude = String.valueOf(gpsTracker.longitude);
+			  lat=""+gpsTracker.latitude;
+			  lng=""+gpsTracker.longitude;
+	        }
+		 else
+			 Toast.makeText(getApplicationContext(), "Not able to get Location", Toast.LENGTH_SHORT).show();
+			 
+	   
 	}
 	}
