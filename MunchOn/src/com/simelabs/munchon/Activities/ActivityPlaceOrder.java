@@ -3,11 +3,27 @@ package com.simelabs.munchon.Activities;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import com.actionbarsherlock.internal.widget.IcsLinearLayout;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.Request.Method;
+import com.android.volley.Response.ErrorListener;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.simelabs.munchon.R;
 import com.simelabs.munchon.Adapters.AdapterPickupTimeGrid;
 import com.simelabs.munchon.Adapters.AdapterPlaceorderItemList;
 import com.simelabs.munchon.Beacon.MyService;
+import com.simelabs.munchon.DB.AppController;
+import com.simelabs.munchon.DB.Const;
+import com.simelabs.munchon.DB.ServiceRequests;
+import com.simelabs.munchon.Domain.PublicValues;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -222,15 +238,130 @@ public class ActivityPlaceOrder extends Activity implements OnClickListener{
 	
 	public void placeorder(View v)
 	{
-		stopService(new Intent(getApplicationContext(),MyService.class));
+		/*stopService(new Intent(getApplicationContext(),MyService.class));
 		//Disable bluetooth
 		BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();    
 		if (mBluetoothAdapter.isEnabled()) {
 		    mBluetoothAdapter.disable(); 
-		} 
+		} */
 		
-		Intent i=new Intent(getApplicationContext(), ActivityPayment.class);
-		startActivity(i);
+		
+		
+
+		ArrayList<String> alldishes=new ArrayList<String>();
+		alldishes.add("1");
+		alldishes.add("2");
+		alldishes.add("3");
+		
+		JSONObject jsonBody = new JSONObject();
+		try {
+			jsonBody.put("tableNo", "");
+			jsonBody.put("restaurantId", 1);
+			jsonBody.put("totalAmount", 78);
+			jsonBody.put("customerID", 20);
+			jsonBody.put("customerDeliveryTime", "2015-05-06 17:30:00");
+			jsonBody.put("dineIn", 0);
+			jsonBody.put("mailPaymentReceipt", 1);
+			/*dishes*/
+			
+			
+			
+		} catch (JSONException e) {
+		    // TODO Auto-generated catch block
+		    e.printStackTrace();
+		}
+		JSONObject dish;
+		JSONArray dishArray = new JSONArray();
+		
+		for(String i:alldishes)
+		{
+			 dish = new JSONObject();
+			try {
+				dish.put("parameter1_option_price", 5);
+				dish.put("parameter5_Option", "");
+				dish.put("parameter4_option_price", 0);
+				dish.put("parameter4_Option", "");
+				dish.put("parameter1_Option", "");
+				dish.put("parameter3_Option", "");
+				dish.put("parameter2_Option", "");
+				dish.put("quantity", 4);
+				dish.put("parameter_4", "");
+				dish.put("parameter_3", "");
+				dish.put("parameter_2", "");
+				dish.put("parameter_1", "");
+				dish.put("parameter_5", "");
+				dish.put("dishName", "James Boags Premium");
+				dish.put("price", 8);
+				dish.put("parameter2_option_price", 1);
+				dish.put("parameter5_option_price", 0);
+				dish.put("cookingTime", "10");
+				dish.put("parameter3_option_price", 0);
+				dish.put("customerInstruction", "no remarks");
+				dish.put("dishId", 11);
+				dishArray.put(dish);
+				
+			} catch (JSONException e) {
+			    // TODO Auto-generated catch block
+			    e.printStackTrace();
+			}
+		}
+		
+		try {
+			jsonBody.put("dishes", dishArray);
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Log.i("jsonbody",""+jsonBody);
+		
+		
+		
+		
+		/*StringRequest strReq = new StringRequest(Method.POST,
+				Const.URL_place_order, new Response.Listener<String>() {
+
+					@Override
+					public void onResponse(String response) {
+						Log.d("db connect for place order", response.toString());
+
+					}
+				}, new Response.ErrorListener() {
+
+					@Override
+					public void onErrorResponse(VolleyError error) {
+						VolleyLog.d("db connect for placeorder", "Error: " + error.getMessage());
+					}
+				});*/
+
+		// Adding request to request queue
+	
+		
+		
+		JsonObjectRequest obj=new JsonObjectRequest(Request.Method.POST,Const.URL_place_order, jsonBody, new Response.Listener<JSONObject>() {
+
+			@Override
+			public void onResponse(JSONObject arg0) {
+				// TODO Auto-generated method stub
+				Toast.makeText(getApplicationContext(), arg0+"", Toast.LENGTH_SHORT).show();
+				Log.i("responce",""+arg0);
+				
+			}
+			
+			
+		}, new ErrorListener() {
+			
+			@Override
+			public void onErrorResponse(VolleyError arg0) {
+				// TODO Auto-generated method stub
+				Toast.makeText(getApplicationContext(), arg0+"", Toast.LENGTH_SHORT).show();
+				Log.i("responce",""+arg0);
+			}
+		});
+		
+		AppController.getInstance().addToRequestQueue(obj, "placeorder");
+		
+	//	Intent i=new Intent(getApplicationContext(), ActivityPayment.class);
+		//startActivity(i);
 		
 	}
 	

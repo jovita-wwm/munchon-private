@@ -241,6 +241,7 @@ Handler handler = new Handler();
 		Toast.makeText(getApplicationContext(), "no:"+allrestuarants.size(), Toast.LENGTH_SHORT).show();
 		Log.i("table data", allrestuarants+"");
 		
+		
 		Intent i = new Intent(getApplicationContext(), class1);
 		startActivity(i);
 		ActivitySplash.this.finish();
