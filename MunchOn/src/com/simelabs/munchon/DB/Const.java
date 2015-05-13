@@ -15,4 +15,9 @@ public class Const {
 	public static final String URL_IMAGE = "http://ec2-54-69-234-149.us-west-2.compute.amazonaws.com:8080/SpringServices/service/restaurants/47.468449/19.057197";
 	public static final String URL_allorders = "http://ec2-54-69-234-149.us-west-2.compute.amazonaws.com:8080/SpringServices/service/order/0";
 	public static final String URL_place_order="http://ec2-54-69-234-149.us-west-2.compute.amazonaws.com:8080/SpringServices/service/order/addOrder";
-	}
+	public static final String URL_Add_Card="http://ec2-54-69-234-149.us-west-2.compute.amazonaws.com:8080/SpringServices/service/user/addUserCardDetails";
+	public static final String URL_Update_user="http://ec2-54-69-234-149.us-west-2.compute.amazonaws.com:8080/SpringServices/service/user/updateUser";
+
+
+
+}

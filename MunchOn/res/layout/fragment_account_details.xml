@@ -9,7 +9,7 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:padding="5dp"
-             android:background="@drawable/layout_top_down_border"
+             android:background="@drawable/layout_bottom_border"
              android:orientation="vertical" >
 
              <TextView
@@ -40,7 +40,7 @@
         android:id="@+id/lnr_fragment_accountdetails_lastname"
         android:layout_width="match_parent"
           android:padding="5dp"
-            android:background="@drawable/layout_top_down_border"
+            android:background="@drawable/layout_bottom_border"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
                 
@@ -70,7 +70,7 @@
         android:id="@+id/lnr_fragment_accountdetails_email"
         android:layout_width="match_parent"
           android:padding="5dp"
-            android:background="@drawable/layout_top_down_border"
+            android:background="@drawable/layout_bottom_border"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
          

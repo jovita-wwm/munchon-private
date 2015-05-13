@@ -23,6 +23,7 @@ import com.simelabs.munchon.Beacon.MyService;
 import com.simelabs.munchon.DB.AppController;
 import com.simelabs.munchon.DB.Const;
 import com.simelabs.munchon.DB.ServiceRequests;
+import com.simelabs.munchon.Domain.HttprequestsentFeedback;
 import com.simelabs.munchon.Domain.PublicValues;
 
 import android.app.Activity;
@@ -51,7 +52,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ActivityPlaceOrder extends Activity implements OnClickListener{
+public class ActivityPlaceOrder extends Activity implements OnClickListener,HttprequestsentFeedback{
 
 	LinearLayout itemlist;
 	ImageView emailstatus;
@@ -70,6 +71,7 @@ public class ActivityPlaceOrder extends Activity implements OnClickListener{
 		txt_totalamount=(TextView)findViewById(R.id.txt_totalamount);
 		txt_pickuptime=(TextView)findViewById(R.id.txt_pickuptime);
 	
+		ServiceRequests.setcallback(this);
 		
 		ArrayList<ArrayList> items=new ArrayList<ArrayList>();
 		
@@ -201,6 +203,7 @@ public class ActivityPlaceOrder extends Activity implements OnClickListener{
 		temp=newtime;
 		}
 		
+		
 		GridView timegrid=(GridView)pickup.findViewById(R.id.timegrid);
 		AdapterPickupTimeGrid pickupadapter=new AdapterPickupTimeGrid(this, timelist);
 		timegrid.setAdapter(pickupadapter);
@@ -315,28 +318,11 @@ public class ActivityPlaceOrder extends Activity implements OnClickListener{
 		Log.i("jsonbody",""+jsonBody);
 		
 		
-		
-		
-		/*StringRequest strReq = new StringRequest(Method.POST,
-				Const.URL_place_order, new Response.Listener<String>() {
-
-					@Override
-					public void onResponse(String response) {
-						Log.d("db connect for place order", response.toString());
-
-					}
-				}, new Response.ErrorListener() {
-
-					@Override
-					public void onErrorResponse(VolleyError error) {
-						VolleyLog.d("db connect for placeorder", "Error: " + error.getMessage());
-					}
-				});*/
-
-		// Adding request to request queue
+		ServiceRequests request=new ServiceRequests(getApplicationContext());
+		request.PostServiceRequest(Const.URL_place_order, jsonBody);
 	
 		
-		
+		/*
 		JsonObjectRequest obj=new JsonObjectRequest(Request.Method.POST,Const.URL_place_order, jsonBody, new Response.Listener<JSONObject>() {
 
 			@Override
@@ -358,7 +344,25 @@ public class ActivityPlaceOrder extends Activity implements OnClickListener{
 			}
 		});
 		
-		AppController.getInstance().addToRequestQueue(obj, "placeorder");
+		AppController.getInstance().addToRequestQueue(obj, "placeorder");*/
+		
+		
+		final Dialog credit=new Dialog(ActivityPlaceOrder.this);
+		credit.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		credit.setContentView(R.layout.dialog_creditcard_missing);
+		credit.getWindow().setBackgroundDrawable(new ColorDrawable(Color.argb(0,0,0,0)));
+		//adding dynamic credit
+		credit.show();
+		
+		ImageView close=(ImageView)credit.findViewById(R.id.button_close);
+		close.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				credit.dismiss();
+			}
+		});
 		
 	//	Intent i=new Intent(getApplicationContext(), ActivityPayment.class);
 		//startActivity(i);
@@ -482,5 +486,13 @@ public class ActivityPlaceOrder extends Activity implements OnClickListener{
 	public void dismiss()
 	{
 		changenumberdialog.dismiss();
+	}
+
+
+	@Override
+	public void oncomplete(String name) {
+		// TODO Auto-generated method stub
+		
+		Toast.makeText(getApplicationContext(), name, Toast.LENGTH_SHORT).show();
 	}
 }

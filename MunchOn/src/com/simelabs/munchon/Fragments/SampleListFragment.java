@@ -3,7 +3,7 @@ package com.simelabs.munchon.Fragments;
 import com.simelabs.munchon.R;
 import com.simelabs.munchon.Activities.ActivityMain;
 import com.simelabs.munchon.Activities.ActivityPlaceOrder;
-import com.simelabs.munchon.Activities.CreditcardSampleActivity;
+import com.simelabs.munchon.Activities.ActivityCreditcardSample;
 
 import android.content.Context;
 import android.content.Intent;
@@ -79,7 +79,7 @@ public class SampleListFragment extends ListFragment {
 		case 1:
 			/*newContent = new FragmentMyCart();
 			fca.setTitle("My Cart");*/
-			Intent card = new Intent(getActivity(), CreditcardSampleActivity.class);
+			Intent card = new Intent(getActivity(), ActivityCreditcardSample.class);
 			startActivity(card);
 			break;
 

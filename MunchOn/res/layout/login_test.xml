@@ -13,7 +13,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/layout_top_down_border"
+        android:background="@drawable/layout_bottom_border"
         android:orientation="vertical"
         android:padding="5dp" >
 
@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:background="@drawable/layout_top_down_border"
+        android:background="@drawable/layout_bottom_border"
         android:orientation="vertical"
         android:padding="5dp" >
 

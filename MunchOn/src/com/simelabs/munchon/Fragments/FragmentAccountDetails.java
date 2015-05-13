@@ -1,7 +1,13 @@
 package com.simelabs.munchon.Fragments;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import com.simelabs.munchon.R;
 import com.simelabs.munchon.Activities.ActivityAccountAddLocation;
+import com.simelabs.munchon.DB.Const;
+import com.simelabs.munchon.DB.ServiceRequests;
+import com.simelabs.munchon.Domain.HttprequestsentFeedback;
 import com.simelabs.munchon.Domain.PublicValues;
 
 import android.app.Dialog;
@@ -9,6 +15,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +25,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class FragmentAccountDetails extends Fragment{
+public class FragmentAccountDetails extends Fragment implements HttprequestsentFeedback{
 	Context context;
 	 private View mContentView;
 	 LinearLayout save,change,address;
@@ -33,7 +40,8 @@ public class FragmentAccountDetails extends Fragment{
 		context=getActivity().getApplicationContext();
 		
 		 mContentView = inflater.inflate(R.layout.fragment_account_details, container, false);
-		  return mContentView;
+		 ServiceRequests.setcallback(this);
+		 return mContentView;
 		  
 	}
 	
@@ -50,6 +58,7 @@ public void onActivityCreated( Bundle savedInstanceState) {
 	Fname=(EditText)v.findViewById(R.id.edt_firstname);
 	Lname=(EditText)v.findViewById(R.id.edt_lastname);
 	email=(EditText)v.findViewById(R.id.edt_email);
+	
 	
 	
 	
@@ -80,7 +89,42 @@ public void onActivityCreated( Bundle savedInstanceState) {
 				PublicValues.AccountFirstName=Fname.getText().toString();
 				PublicValues.AccountLastName=Lname.getText().toString();
 				PublicValues.Email=email.getText().toString();
-				Toast.makeText(getActivity(), "Account Details Updated successfully", Toast.LENGTH_SHORT).show();
+				
+				
+				//send details to db
+				
+				JSONObject jsonmain = new JSONObject();
+				
+				JSONObject jsonBody = new JSONObject();
+				try {
+					jsonBody.put("firstName", "nelson");
+					jsonBody.put("lastName","john");
+					jsonBody.put("email","nelson@gmail.com");
+					jsonBody.put("password","qwer");
+					jsonBody.put("address1","schwelm");
+					jsonBody.put("address2","Berlin");
+					jsonBody.put("contactNo","+33469257");
+					jsonBody.put("image","nic.jpg");
+					jsonBody.put("country","France");
+					/*dishes*/
+					
+					
+					
+				} catch (JSONException e) {
+				    // TODO Auto-generated catch block
+				    e.printStackTrace();
+				}
+				try {
+					jsonmain.put("user", jsonBody);
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				Log.i("update user", jsonmain+"");
+				ServiceRequests request=new ServiceRequests(context);
+				request.PostServiceRequest(Const.URL_Update_user, jsonmain);
+				
 			}
 			else
 				Toast.makeText(getActivity(), "Please enter Valid Email Id", Toast.LENGTH_SHORT).show();
@@ -176,6 +220,18 @@ public void onActivityCreated( Bundle savedInstanceState) {
 			
 		}
 	});
+}
+
+@Override
+public void oncomplete(String name) {
+	// TODO Auto-generated method stub
+	
+	if(!name.equalsIgnoreCase("error"))
+	{
+		Toast.makeText(getActivity(), name, Toast.LENGTH_LONG).show();
+		Toast.makeText(getActivity(), "Account Details Updated successfully", Toast.LENGTH_SHORT).show();
+		
+	}
 }
 
 }

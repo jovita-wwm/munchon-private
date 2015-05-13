@@ -38,7 +38,7 @@ import java.util.Set;
  * For sample mobile backend interactions, see
  * https://github.com/paypal/rest-api-sdk-python/tree/master/samples/mobile_backend
  */
-public class CreditcardSampleActivity extends Activity {
+public class ActivityCreditcardSample extends Activity {
     private static final String TAG = "paymentExample";
     /**
      * - Set to PayPalConfiguration.ENVIRONMENT_PRODUCTION to move real money.
@@ -102,7 +102,7 @@ public class CreditcardSampleActivity extends Activity {
          * See getStuffToBuy(..) for examples of some available payment options.
          */
 
-        Intent intent = new Intent(CreditcardSampleActivity.this, PaymentActivity.class);
+        Intent intent = new Intent(ActivityCreditcardSample.this, PaymentActivity.class);
 
         // send the same configuration for restart resiliency
         intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);
@@ -163,7 +163,7 @@ public class CreditcardSampleActivity extends Activity {
     }
 
     public void onFuturePaymentPressed(View pressed) {
-        Intent intent = new Intent(CreditcardSampleActivity.this, PayPalFuturePaymentActivity.class);
+        Intent intent = new Intent(ActivityCreditcardSample.this, PayPalFuturePaymentActivity.class);
 
         // send the same configuration for restart resiliency
         intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);
@@ -172,7 +172,7 @@ public class CreditcardSampleActivity extends Activity {
     }
 
     public void onProfileSharingPressed(View pressed) {
-        Intent intent = new Intent(CreditcardSampleActivity.this, PayPalProfileSharingActivity.class);
+        Intent intent = new Intent(ActivityCreditcardSample.this, PayPalProfileSharingActivity.class);
 
         // send the same configuration for restart resiliency
         intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);
@@ -202,7 +202,7 @@ public class CreditcardSampleActivity extends Activity {
 
     	            // Never log a raw card number. Avoid displaying it, but if necessary use getFormattedCardNumber()
     	            resultDisplayStr = "Card Number: " + scanResult.getRedactedCardNumber() + "\n";
-
+Toast.makeText(getApplicationContext(), ""+resultDisplayStr, Toast.LENGTH_LONG).show();
     	            // Do something with the raw number, e.g.:
     	            // myService.setCardNumber( scanResult.cardNumber );
 

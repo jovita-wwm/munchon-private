@@ -14,12 +14,16 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.Request.Method;
+import com.android.volley.Response.ErrorListener;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.simelabs.munchon.Domain.BeaconDomain;
+import com.simelabs.munchon.Domain.HttprequestsentFeedback;
 import com.simelabs.munchon.Domain.PublicValues;
 import com.simelabs.munchon.Domain.RestaurantDomain;
 
@@ -30,7 +34,7 @@ public class ServiceRequests {
 	 String str_responce;
 	 public ArrayList<RestaurantDomain> allrestuarants=new ArrayList<RestaurantDomain>();
 	 public ArrayList<BeaconDomain> allbeacons=new ArrayList<BeaconDomain>();
-	
+	 static HttprequestsentFeedback feedback;
 	public ServiceRequests(Context cotxt) {
 		// TODO Auto-generated constructor stub
 	context=cotxt;
@@ -39,7 +43,7 @@ public class ServiceRequests {
 	/**
 	 * Making json object request
 	 * */
-	public void makeStringReq(String request,String type) {
+	public void makeStringReq(String request) {
 		//showProgressDialog();
 
 		 
@@ -51,7 +55,8 @@ public class ServiceRequests {
 						Log.d("db connect for restaurant list", response.toString());
 						//Toast.makeText(getApplicationContext(), response.toString()+"", Toast.LENGTH_SHORT).show();
 					//	PublicValues.restaurantresponce=response;
-						readBeaconJson(response.toString());
+						//readBeaconJson(response.toString());
+						feedback.oncomplete(response);
 						str_responce=response;
 						hideProgressDialog();
 
@@ -61,6 +66,9 @@ public class ServiceRequests {
 					@Override
 					public void onErrorResponse(VolleyError error) {
 						VolleyLog.d("db connect for beacon list", "Error: " + error.getMessage());
+						feedback.oncomplete("error");
+						
+						
 						hideProgressDialog();
 					}
 				});
@@ -71,6 +79,32 @@ public class ServiceRequests {
 
 	}
 
+	public void PostServiceRequest(String url,JSONObject jsonBody)
+	{
+		JsonObjectRequest obj=new JsonObjectRequest(Request.Method.POST,url, jsonBody, new Response.Listener<JSONObject>() {
+
+			@Override
+			public void onResponse(JSONObject arg0) {
+				// TODO Auto-generated method stub
+				Toast.makeText(context, arg0+"", Toast.LENGTH_SHORT).show();
+				Log.i("responce",""+arg0);
+				feedback.oncomplete(arg0+"");
+			}
+			
+			
+		}, new ErrorListener() {
+			
+			@Override
+			public void onErrorResponse(VolleyError arg0) {
+				// TODO Auto-generated method stub
+				Toast.makeText(context, arg0+"", Toast.LENGTH_SHORT).show();
+				Log.i("responce",""+arg0);
+				feedback.oncomplete("error");
+			}
+		});
+		
+		AppController.getInstance().addToRequestQueue(obj, "post");
+	}
 public void readBeaconJson(String responce)
 {
 
@@ -204,6 +238,13 @@ public void readBeaconJson(String responce)
 	private void hideProgressDialog() {
 		if (pDialog.isShowing())
 			pDialog.dismiss();
+	}
+	
+	
+	public static void setcallback(HttprequestsentFeedback instance) {
+
+		feedback = instance;
+
 	}
 	
 }
