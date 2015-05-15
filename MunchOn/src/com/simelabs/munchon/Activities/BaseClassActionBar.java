@@ -15,6 +15,7 @@ import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.app.SherlockListActivity;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.simelabs.munchon.R;
+import com.simelabs.munchon.Domain.PublicValues;
 
 public class BaseClassActionBar extends SherlockActivity {
 
@@ -51,6 +52,7 @@ public class BaseClassActionBar extends SherlockActivity {
 		actionBarTitle = (TextView) actionBarView.findViewById(R.id.txt_title);
 		
 		
+		
 		back.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -72,9 +74,11 @@ public class BaseClassActionBar extends SherlockActivity {
 
 	public void updateTableNumber(String tablenumber)
 	{
+		table = (ImageView) actionBarView.findViewById(R.id.btn_table);
+		tableno = (TextView) actionBarView.findViewById(R.id.txt_table_no);
 		table.setVisibility(View.VISIBLE);
 		tableno.setVisibility(View.VISIBLE);
-		tableno.setText(tablenumber);
+		tableno.setText("8");
 		tableno.setTypeface(tf);
 	}
 	

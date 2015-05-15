@@ -364,8 +364,8 @@ public class ActivityPlaceOrder extends Activity implements OnClickListener,Http
 			}
 		});
 		
-	//	Intent i=new Intent(getApplicationContext(), ActivityPayment.class);
-		//startActivity(i);
+		Intent i=new Intent(getApplicationContext(), ActivityPayment.class);
+		startActivity(i);
 		
 	}
 	

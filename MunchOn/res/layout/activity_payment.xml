@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="9"
+        android:layout_weight="4"
         android:gravity="center"
         android:orientation="vertical" >
 
@@ -37,6 +37,24 @@
             android:choiceMode="singleChoice"
             android:layout_height="wrap_content" >
         </ListView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+       <Button
+                    android:id="@+id/timeconfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:background="@drawable/roundedge"
+                    android:layout_gravity="center"
+                    android:text="Confirm Payment" />
 
     </LinearLayout>
 

@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import com.simelabs.munchon.Activities.ActivityRestaurantMenu;
 import com.simelabs.munchon.Activities.BaseClassActionBar;
 import com.simelabs.munchon.Domain.BeaconDomain;
 import com.simelabs.munchon.Domain.PublicValues;
@@ -25,7 +26,12 @@ public class MyService extends Service {
 	 private static final Region ALL_ESTIMOTE_BEACONS_REGION = new Region("rid", null, null, null);
 	 
 	 public int bcountold,bcountnew;
-	
+	Activity act;
+	 public MyService(Activity a) {
+		// TODO Auto-generated constructor stub
+		 act=a;
+	}
+	 
 	@Override
 	public IBinder onBind(Intent intent) {
 		return null;
@@ -105,8 +111,10 @@ public class MyService extends Service {
 	   		PublicValues.tableno=b.getTable_name()+"";
 	   		
 	   		Toast.makeText(getApplicationContext(), ""+b.getTable_name(), Toast.LENGTH_SHORT).show();
-	   		BaseClassActionBar table=new BaseClassActionBar();
-	   		table.updateTableNumber(b.getTable_name());
+	   		
+	   		ActivityRestaurantMenu act=new ActivityRestaurantMenu();
+	   		act.update(b.getTable_name());
+	   		
 	   			}
 			}
 

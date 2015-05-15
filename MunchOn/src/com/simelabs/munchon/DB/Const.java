@@ -18,6 +18,11 @@ public class Const {
 	public static final String URL_Add_Card="http://ec2-54-69-234-149.us-west-2.compute.amazonaws.com:8080/SpringServices/service/user/addUserCardDetails";
 	public static final String URL_Update_user="http://ec2-54-69-234-149.us-west-2.compute.amazonaws.com:8080/SpringServices/service/user/updateUser";
 
-
-
+	public static final String RestImageUrl = "https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-060425629624/munchon/gallery/restaurant/";
+	public static final String RestLogoImageUrl = "https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-060425629624/munchon/gallery/restaurantlogo/";
+		public static final String URL_DISH_CATEGORIES = "http://ec2-54-69-234-149.us-west-2.compute.amazonaws.com:8080/SpringServices/service/category/restaurant/";
+	public static final String URL_DISH_LIST = "http://ec2-54-69-234-149.us-west-2.compute.amazonaws.com:8080/SpringServices/service/dishes/";
+	public static final String URL_ALL_DEALS_LIST = "http://ec2-54-69-234-149.us-west-2.compute.amazonaws.com:8080/SpringServices/service/deals/alldeals";
+	public static final String URL_MY_DEALS_LIST = "http://ec2-54-69-234-149.us-west-2.compute.amazonaws.com:8080/SpringServices/service/deals/mydeals/";
+	
 }

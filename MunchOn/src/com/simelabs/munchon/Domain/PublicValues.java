@@ -8,9 +8,10 @@ public class PublicValues {
 
 	
 /*Beacon*/
-	
 	public static int BeaconRefreshInterval; 
 	public static String oldbeacons;
+	public static ArrayList<BeaconDomain> allbeacons=new ArrayList<>();
+	public static String beaconresponce;
 	
 /*Location*/
 	public static String defaultlocation="No location Selected";
@@ -32,9 +33,18 @@ public class PublicValues {
 	public static ArrayList<RestaurantDomain> allnearbyRestaurants=new ArrayList<>();
 	public static String restaurantresponce;
 	
-	/*Beacon details*/
-	public static ArrayList<BeaconDomain> allbeacons=new ArrayList<>();
-	public static String beaconresponce;
+	/* Dish Categories*/
+	public static ArrayList<DishCategoriesDomain> allDishCategories=new ArrayList<>();
+	public static String dishResponse;
 	
+	/* Dish list*/
+	public static ArrayList<DishesDomain> allDishes=new ArrayList<>();
+	public static String dishListResponse;
+	
+	/*Deals list*/
+	public static ArrayList<DealsDomain> userDeals=new ArrayList<>();
+	public static String userDealsListResponse;
+	public static ArrayList<DealsDomain> allDeals=new ArrayList<>();
+	public static String allDealsListResponse;	
 	
 }

@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:adjustViewBounds="true"
-            android:src="@drawable/dish" />
+            android:src="@drawable/icon_bg" />
         
     </LinearLayout>
     
@@ -37,6 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textSize="16dp"
             android:text="Mini Mac &amp; Cheese" />
 
         <TextView
@@ -44,9 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:maxLines="3"
-            android:text="Made a first batch substituting gruyere for the American cheese and doubled the paprika and still found them to be pretty bland."
-            android:textSize="12dp" />
+            android:textSize="14dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -76,35 +75,54 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignParentTop="true"
-                    android:layout_marginLeft="31dp"
-                    android:layout_marginTop="5dp"
+                    android:gravity="fill_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:layout_toRightOf="@+id/textDishPrice" >
 
                     <ImageView
-                        android:id="@+id/img_fishy"
+                        android:id="@+id/img_Prop_Chilly"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:layout_marginRight="5dp"
-                        android:src="@drawable/icon_fishy" />
-
-                    <ImageView
-                        android:id="@+id/img_chilly"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:visibility="gone"
                         android:layout_marginRight="5dp"
                         android:src="@drawable/icon_chillie" />
 
                     <ImageView
-                        android:id="@+id/img_gf"
+                        android:id="@+id/img_Prop_Vegan"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:visibility="gone"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/icon_vegan" />
+
+                    <ImageView
+                        android:id="@+id/img_Prop_Glutenfree"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_marginRight="5dp"
+                        android:visibility="gone"
                         android:src="@drawable/icon_gf" />
 
                     <ImageView
-                        android:id="@+id/img_vegan"
+                        android:id="@+id/img_Prop_Seafood"
+                        android:layout_width="25dp"
+                        android:visibility="gone"
+                        android:layout_height="25dp"
+                        android:src="@drawable/icon_fishy" />
+                    
+                      <ImageView
+                        android:id="@+id/img_Prop_Veg"
+                        android:layout_width="25dp"
+                        android:visibility="gone"
+                        android:layout_height="25dp"
+                        android:src="@drawable/icon_vegan" />
+                      
+                    <ImageView
+                        android:id="@+id/img_Prop_Nutfree"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
+                        android:visibility="gone"
                         android:src="@drawable/icon_vegan" />
                 </LinearLayout>
 

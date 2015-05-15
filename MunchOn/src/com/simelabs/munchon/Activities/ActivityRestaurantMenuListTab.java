@@ -29,6 +29,9 @@ import android.widget.Toast;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.simelabs.munchon.R;
+import com.simelabs.munchon.Domain.DishCategoriesDomain;
+import com.simelabs.munchon.Domain.PublicValues;
+import com.simelabs.munchon.Domain.RestaurantDomain;
 
 public class ActivityRestaurantMenuListTab extends TabActivity {
 	TabHost tabHost;
@@ -41,8 +44,11 @@ public class ActivityRestaurantMenuListTab extends TabActivity {
 	ImageView basket, tableImg;
 	TextView tableno;
 	static TextView basketitems;
-	int userType;
-    static int count;
+	int userType,ListPosition;
+	static int count;
+	ArrayList<DishCategoriesDomain> categoriesList;
+	ArrayList<RestaurantDomain> restaurantDetails;
+	String restId ;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -52,17 +58,19 @@ public class ActivityRestaurantMenuListTab extends TabActivity {
 		String fontPath = "fonts/LaoUI.ttf";
 		String fontPathBold = "fonts/LaoUIb.ttf";
 
+		Intent userIntent = getIntent();
+		userType = userIntent.getIntExtra("userType", 0);
+		tabnum = userIntent.getIntExtra("position", 0);
+		ListPosition = userIntent.getIntExtra("Restposition", 0);
+		restId = userIntent.getStringExtra("restId");
+		
 		// Loading Font Face
 		tf = Typeface.createFromAsset(getAssets(), fontPath);
 		Typeface tfb = Typeface.createFromAsset(getAssets(), fontPathBold);
 
+		categoriesList = PublicValues.allDishCategories;
+		restaurantDetails = PublicValues.allnearbyRestaurants;
 		
-		/*SharedPreferences gprefs = getSharedPreferences("Basket Item Count",
-				MODE_PRIVATE);
-
-		count = gprefs.getInt("Count",0);*/
-		
-
 		ImageView back = (ImageView) findViewById(R.id.btn_back);
 		TextView actionBarTitle = (TextView) findViewById(R.id.txt_title);
 		tableImg = (ImageView) findViewById(R.id.btn_table);
@@ -72,16 +80,14 @@ public class ActivityRestaurantMenuListTab extends TabActivity {
 		basketitems = (TextView) findViewById(R.id.txt_basket_items);
 
 		RestaurantName = "Sliding Lounge";
-		actionBarTitle.setText(RestaurantName);
+		actionBarTitle.setText(restaurantDetails.get(ListPosition).getName());
 		actionBarTitle.setTypeface(tfb);
 		tableno.setTypeface(tf);
 		basketitems.setTypeface(tf);
 
 		basket.setVisibility(View.VISIBLE);
 
-		Intent userIntent = getIntent();
-		userType = userIntent.getIntExtra("userType", 0);
-
+		
 		if (userType == 0) {
 			// Toast.makeText(getApplicationContext(), "Dine in",
 			// Toast.LENGTH_SHORT).show();
@@ -103,81 +109,17 @@ public class ActivityRestaurantMenuListTab extends TabActivity {
 		tabHost = (TabHost) findViewById(android.R.id.tabhost);
 		mHorizontalScrollView = (HorizontalScrollView) findViewById(R.id.hs);
 
-		Intent intent = getIntent();
-		tabnum = intent.getIntExtra("position", 0);
-
-		categories = new ArrayList<String>();
-		categories = getIntent().getStringArrayListExtra("categoryArray");
+		// categories = new ArrayList<String>();
+		// categories = getIntent().getStringArrayListExtra("categoryArray");
 		/*
 		 * Toast.makeText(getApplicationContext(), "Selected tab is " + tabnum,
 		 * Toast.LENGTH_SHORT).show();
 		 */
 
-		for (Integer i = 0; i < categories.size(); i++) {
-			String name = categories.get(i);
+		for (Integer i = 0; i < categoriesList.size(); i++) {
+			String name = categoriesList.get(i).getCategoryName();
 			createTabs(name);
 		}
-
-		/*
-		 * TabWidget widget = tabHost.getTabWidget();
-		 * 
-		 * TabSpec tab1 = tabHost.newTabSpec("Breakfast"); TabSpec tab2 =
-		 * tabHost.newTabSpec("Coffee"); TabSpec tab3 =
-		 * tabHost.newTabSpec("Appetizers"); TabSpec tab4 =
-		 * tabHost.newTabSpec("Desserts");
-		 * 
-		 * tab1.setIndicator("Breakfast"); tab1.setContent(new Intent(this,
-		 * ActivityDishCategory.class));
-		 * 
-		 * tab2.setIndicator("Coffee"); tab2.setContent(new Intent(this,
-		 * ActivityDishCategory.class));
-		 * 
-		 * tab3.setIndicator("Appetizers"); tab3.setContent(new Intent(this,
-		 * ActivityDishCategory.class));
-		 * 
-		 * tab4.setIndicator("Desserts"); tab4.setContent(new Intent(this,
-		 * ActivityDishCategory.class));
-		 * 
-		 * tabHost.addTab(tab1); tabHost.addTab(tab2); tabHost.addTab(tab3);
-		 * tabHost.addTab(tab4);
-		 * 
-		 * 
-		 * 
-		 * float scale = getResources().getDisplayMetrics().density; final
-		 * double tabWidth = (int) (150 * scale + 0.5f);
-		 * 
-		 * for (int i = 0; i < tabHost.getTabWidget().getTabCount(); i++) {
-		 * tabHost.getTabWidget().getChildTabViewAt(i).getLayoutParams().width =
-		 * (int) tabWidth; }
-		 * 
-		 * final double screenWidth = getWindowManager().getDefaultDisplay()
-		 * .getWidth();
-		 * 
-		 * tabHost.setOnTabChangedListener(new OnTabChangeListener() {
-		 * 
-		 * @Override public void onTabChanged(String tabId) { int
-		 * nrOfShownCompleteTabs = ((int) (Math.floor(screenWidth / tabWidth) -
-		 * 1) / 2) * 2; int remainingSpace = (int) ((screenWidth - tabWidth -
-		 * (tabWidth * nrOfShownCompleteTabs)) / 2);
-		 * 
-		 * int a = (int) (tabHost.getCurrentTab() * tabWidth); int b = (int)
-		 * ((int) (nrOfShownCompleteTabs / 2) * tabWidth); int offset = (a - b)
-		 * - remainingSpace;
-		 * 
-		 * mHorizontalScrollView.scrollTo(offset, 0); } });
-		 * 
-		 * for (int i = 0; i < widget.getChildCount(); i++) { View v =
-		 * widget.getChildAt(i);
-		 * 
-		 * TextView tv = (TextView) v.findViewById(android.R.id.title);
-		 * tv.setTypeface(tf); tv.setAllCaps(false); tv.setTextSize(15);
-		 * 
-		 * if (tv == null) { continue; } tabHost.setCurrentTab(tabnum);
-		 * v.setBackgroundResource(R.drawable.tabselector);
-		 * tabHost.getTabWidget().setDividerDrawable(null);
-		 * 
-		 * }
-		 */
 
 	}
 
@@ -187,7 +129,7 @@ public class ActivityRestaurantMenuListTab extends TabActivity {
 
 		TabSpec tab = tabHost.newTabSpec(name);
 		tab.setIndicator(name);
-		tab.setContent(new Intent(this, ActivityDishCategory.class));
+		tab.setContent(new Intent(this, ActivityDishCategory.class).putExtra("restId", restId));
 		tabHost.addTab(tab);
 		mHorizontalScrollView.setSmoothScrollingEnabled(true);
 		tabHost.setCurrentTab(tabnum);

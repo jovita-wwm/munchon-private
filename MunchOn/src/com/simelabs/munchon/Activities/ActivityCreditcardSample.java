@@ -79,7 +79,7 @@ public class ActivityCreditcardSample extends Activity {
 
         // customize these values to suit your needs.
         scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_EXPIRY, true); // default: false
-        scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_CVV, false); // default: false
+        scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_CVV, true); // default: false
         scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_POSTAL_CODE, false); // default: false
 
         // MY_SCAN_REQUEST_CODE is arbitrary and is only used within this activity.
@@ -206,17 +206,32 @@ Toast.makeText(getApplicationContext(), ""+resultDisplayStr, Toast.LENGTH_LONG).
     	            // Do something with the raw number, e.g.:
     	            // myService.setCardNumber( scanResult.cardNumber );
 
-    	            if (scanResult.isExpiryValid()) {
+					boolean ok=true;
+
+    	            if (!scanResult.isExpiryValid()) {
     	                resultDisplayStr += "Expiration Date: " + scanResult.expiryMonth + "/" + scanResult.expiryYear + "\n";
+    	           ok=false;
     	            }
 
-    	            if (scanResult.cvv != null) {
+    	            if (scanResult.cvv == null) {
     	                // Never log or display a CVV
     	                resultDisplayStr += "CVV has " + scanResult.cvv.length() + " digits.\n";
+    	           ok=false;
     	            }
 
-    	            if (scanResult.postalCode != null) {
-    	                resultDisplayStr += "Postal Code: " + scanResult.postalCode + "\n";
+    	          /*  if (scanResult.postalCode == null) {
+    	               // resultDisplayStr += "Postal Code: " + scanResult.postalCode + "\n";
+    	            ok=false;
+    	            }*/
+    	            
+    	            if(ok==true)
+    	            {
+    	            	Intent i =new Intent(getApplicationContext(),ActivityCardAddedSuccessful.class);
+    	            	startActivity(i);
+    	            }
+    	            else
+    	            {
+    	            	Toast.makeText(getApplicationContext(), "something wrong", Toast.LENGTH_SHORT).show();
     	            }
     	        }
     	        else {

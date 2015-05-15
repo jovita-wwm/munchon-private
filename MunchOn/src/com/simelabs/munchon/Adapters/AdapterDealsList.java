@@ -17,6 +17,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.common.internal.r;
 import com.simelabs.munchon.R;
 
 import com.simelabs.munchon.Domain.DealsDomain;
@@ -24,18 +25,19 @@ import com.simelabs.munchon.Domain.DishCategoriesDomain;
 import com.simelabs.munchon.Domain.DishesDomain;
 import com.simelabs.munchon.Domain.ImageHelper;
 
-public class DealsListAdapter extends BaseAdapter
+public class AdapterDealsList extends BaseAdapter
 
 {
 	private final Activity context;
 	ArrayList<DealsDomain> deals = new ArrayList<DealsDomain>();
-	ViewHolder h;
+	ProgressDialog p;
+	ImageView ImageDeal;
 	ImageHelper img;
 	
-	public DealsListAdapter(Activity context, ArrayList<DealsDomain> deals) {
+	public AdapterDealsList(Activity context, ArrayList<DealsDomain> dealsList) {
 
 		this.context = context;
-		this.deals = deals;
+		this.deals = dealsList;
 
 	}
 
@@ -61,47 +63,70 @@ public class DealsListAdapter extends BaseAdapter
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		LayoutInflater inflater = context.getLayoutInflater();
-
-		img = new ImageHelper();
 		
-		Typeface font = Typeface.createFromAsset(context.getAssets(),
-				"LaoUI.ttf");
-		Typeface fontBold = Typeface.createFromAsset(context.getAssets(),
-				"LaoUIb.ttf");
+		img= new ImageHelper();
+		
+        Typeface font = Typeface.createFromAsset(context.getAssets(), "LaoUI.ttf");
+        Typeface fontBold = Typeface.createFromAsset(context.getAssets(), "LaoUIb.ttf");
+        
+		View rowView = inflater.inflate(
+				R.layout.deals_list_item, null, true);
 
-		View v = convertView;
+		TextView RestaurantName = (TextView) rowView.findViewById(R.id.txt_rest_name);
+		TextView CouponCode = (TextView) rowView
+				.findViewById(R.id.txt_coupon_num);
+		TextView DealValidity = (TextView) rowView.findViewById(R.id.txt_validity);
+		ImageDeal = (ImageView) rowView.findViewById(R.id.imageDeal);
+		
+		RestaurantName.setTypeface(fontBold);
+		CouponCode.setTypeface(font);
+		DealValidity.setTypeface(font);
+		
+		RestaurantName.setText(deals.get(position).getRestaurantName());
+		CouponCode.setText("Coupon code: "+deals.get(position).getCouponCode());
+		DealValidity.setText("Valid till: " +deals.get(position).getDealValidityDate());
+		
+		String imageurl = "https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-060425629624/munchon/gallery/deals/";
 
-		if (v == null) {
-			v = inflater.inflate(R.layout.deals_list_item, parent, false);
+		
+		new DownloadImageTask().execute(imageurl
+				+ deals.get(position).getImage());
+		
+		/*if (v == null) {
+			v = inflater.inflate(R.layout.deals_list_item, parent,
+					false);
 			h = new ViewHolder();
+			
 			h.RestaurantName = (TextView) v.findViewById(R.id.txt_rest_name);
-			h.CouponNumber = (TextView) v.findViewById(R.id.txt_coupon_num);
+			h.CouponCode = (TextView) v
+					.findViewById(R.id.txt_coupon_num);
 			h.DealValidity = (TextView) v.findViewById(R.id.txt_validity);
-
 			h.ImageDeal = (ImageView) v.findViewById(R.id.imageDeal);
-
+			
 			v.setTag(h);
 		} else {
 			h = (ViewHolder) v.getTag();
 		}
 
 		h.RestaurantName.setTypeface(fontBold);
-		h.CouponNumber.setTypeface(font);
+		h.CouponCode.setTypeface(font);
 		h.DealValidity.setTypeface(font);
 		
+		h.RestaurantName.setText(deals.get(position).getRestaurantName());
+		h.CouponCode.setText("Coupon code: "+deals.get(position).getCouponCode());
+		h.DealValidity.setText("Valid till: " +deals.get(position).getDealValidityDate());
+
 		String imageurl = "https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-060425629624/munchon/gallery/deals/";
 
+		p.show();
 		new DownloadImageTask().execute(imageurl
 				+ deals.get(position).getImage());
-		
-		h.RestaurantName.setText(deals.get(position).getRestaurantName());
-		h.CouponNumber.setText("Coupon Code: "+deals.get(position).getCouponCode());
-		h.DealValidity.setText("Valid till: "+deals.get(position).getDealValidityDate());
+		*/
 
-		return v;
+		return rowView;
 	}
-
-	/**
+	
+	/** 
 	 * to stop recycling of listview items
 	 */
 	@Override
@@ -109,28 +134,33 @@ public class DealsListAdapter extends BaseAdapter
 		return getCount();
 	}
 
-	/**
+	/** 
 	 * to stop recycling of listview items
 	 */
 	@Override
 	public int getItemViewType(int position) {
 		return position;
 	}
-
-	private static class ViewHolder {
-
-		TextView RestaurantName, CouponNumber, DealValidity;
+	
+	/*private static class ViewHolder{
+		TextView RestaurantName,DealValidity,CouponCode;
 		ImageView ImageDeal;
-
-	}
-
-	public ImageLoader imageLoader;
+		
+		}
+	
+	*/public ImageLoader imageLoader;
 
 	private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+		ImageView bmImage;
+
+
 		
+		public DownloadImageTask() {
+			this.bmImage = bmImage;
+		}
 
 		protected Bitmap doInBackground(String... urls) {
-
+			
 			String urldisplay = urls[0];
 			Bitmap mIcon11 = null;
 			try {
@@ -144,12 +174,12 @@ public class DealsListAdapter extends BaseAdapter
 		}
 
 		protected void onPostExecute(Bitmap result) {
-
+			
 			
 			Bitmap b = img.getRoundedCornerBitmap(result, 50);
-			h.ImageDeal.setImageBitmap(b);
-		
-
+			
+			ImageDeal.setImageBitmap(b);
+			
 		}
 	}
 

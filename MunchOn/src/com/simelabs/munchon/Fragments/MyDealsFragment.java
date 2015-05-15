@@ -1,14 +1,33 @@
 package com.simelabs.munchon.Fragments;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.Tab;
 import com.actionbarsherlock.app.SherlockFragment;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.Request.Method;
+import com.android.volley.toolbox.StringRequest;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.simelabs.munchon.R;
+import com.simelabs.munchon.Adapters.AdapterDealsList;
 import com.simelabs.munchon.Adapters.DealsListAdapter;
+import com.simelabs.munchon.DB.AppController;
+import com.simelabs.munchon.DB.Const;
+import com.simelabs.munchon.Domain.DealsDomain;
 import com.simelabs.munchon.Domain.ImageHelper;
+import com.simelabs.munchon.Domain.PublicValues;
+import com.simelabs.munchon.Domain.RestaurantDomain;
+import com.simelabs.munchon.Network.Internet;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -31,6 +50,7 @@ import android.support.v4.app.FragmentTabHost;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,98 +61,119 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MyDealsFragment extends ListFragment {
-	Integer[] RestImageArray = { R.drawable.dishthree, R.drawable.dishtwo,
-			R.drawable.dishone, R.drawable.dish, R.drawable.dish,
-			R.drawable.dishone };
-	String[] RestNameArray = { "Slide Lounge", "Le Pelican", "Slide Lounge",
-			"Le Pelican", "Slide Lounge", "Le Pelican", "Slide Lounge",
-			"Le Pelican", "Slide Lounge", "Le Pelican" };
-	String[] DealDescArray = { "30% off on any Pizza", "20% off on any Muffin",
-			"30% off on any Pizza", "20% off on any Muffin",
-			"30% off on any Pizza", "20% off on any Muffin",
-			"30% off on any Pizza", "20% off on any Muffin",
-			"30% off on any Pizza", "20% off on any Muffin" };
-	String[] DealValidityArray = { "3-03-2015", "13-04-2015", "3-03-2015",
-			"13-04-2015", "3-03-2015", "13-04-2015", "3-03-2015", "13-04-2015",
-			"3-03-2015", "13-04-2015" };
-	String[] DistanceArray = { "2.5", "1.3", "2.5", "1.3", "2.5", "1.3", "2.5",
-			"1.3", "2.5", "1.3" };
-	String[] DealPercentageArray = { "30", "25", "30", "25", "30", "25", "30",
-			"25", "30", "25" };
-
-	ArrayList<String> RestaurantNameArray, CouponCode, ValidityDate;
-	ArrayList<Bitmap> RestaurantImageArray;
-
-	Typeface tf, tfb;
-
-	Bitmap RestImagesRounded;
+	
 	ListView list;
 	SlidingMenu sm;
 
-	ArrayList<Bitmap> RestaurentImages;
-
+	private String tag_string_mydeals_req = "tag_string_mydeals_req";
+	public ArrayList<DealsDomain> userDealsList;
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		
 		View view = inflater.inflate(R.layout.dealslist, null);
 
-		// View view = inflater.inflate(R.layout.deals, null);
-		String fontPath = "fonts/LaoUI.ttf";
-		String fontPathBold = "fonts/LaoUIb.ttf";
+		int id = 1;                //Get user id 
+		String URL = Const.URL_MY_DEALS_LIST;   //Append user id to url 
+		userDealsList = new ArrayList<DealsDomain>();
+		
+		Internet net = new Internet(getActivity());
+		boolean netstatus = net.isAvailable();
+		if (netstatus != false) {
 
-		// Loading Font Face
-		tf = Typeface.createFromAsset(getActivity().getAssets(), fontPath);
-		tfb = Typeface.createFromAsset(getActivity().getAssets(), fontPathBold);
+			makeStringReq(URL);
+		} else {
+			Toast.makeText(getActivity(),
+					"Please check network connection!", Toast.LENGTH_SHORT)
+					.show();
 
-		RestaurantImageArray = new ArrayList<Bitmap>();
-		RestaurantNameArray = new ArrayList<String>();
-		CouponCode = new ArrayList<String>();
-		ValidityDate = new ArrayList<String>();
-
+		}
+		
+		
 		sm = new SlidingMenu(getActivity());
 
-		RestaurentImages = new ArrayList<Bitmap>();
-		for (Integer i = 0; i < RestImageArray.length; i++) {
-			BitmapFactory.Options options = new BitmapFactory.Options();
-			options.inSampleSize = 2;
-
-			Bitmap icon = BitmapFactory.decodeResource(getActivity()
-					.getResources(), RestImageArray[i], options);
-			ImageHelper img = new ImageHelper();
-
-			RestImagesRounded = img.getRoundedCornerBitmap(icon, 50);
-			RestaurantImageArray.add(RestImagesRounded);
-		}
-
-		RestaurantNameArray.add("Slide Lounge");
-		RestaurantNameArray.add("Le Pelican");
-		RestaurantNameArray.add("Slide Lounge");
-		RestaurantNameArray.add("Le Pelican");
-		RestaurantNameArray.add("Slide Lounge");
-		RestaurantNameArray.add("Le Pelican");
-
-		CouponCode.add("MO232");
-		CouponCode.add("MO122");
-		CouponCode.add("MO124");
-		CouponCode.add("MO124");
-		CouponCode.add("MO124");
-		CouponCode.add("MO124");
-
-		ValidityDate.add("12/12/2015");
-		ValidityDate.add("12/12/2015");
-		ValidityDate.add("12/12/2015");
-		ValidityDate.add("12/12/2015");
-		ValidityDate.add("12/12/2015");
-		ValidityDate.add("12/12/2015");
-
-		// list = (ListView) view.findViewById(R.id.list);
-
-		DealsListAdapter adapter = new DealsListAdapter(getActivity(),
-				RestaurantImageArray, RestaurantNameArray, CouponCode,
-				ValidityDate,tf,tfb);
-		setListAdapter(adapter);
-
+		
 		return view;
+	}
+
+	/**
+	 * Making json object request
+	 * */
+	private void makeStringReq(String url) {
+
+		StringRequest strReq = new StringRequest(Method.GET, url,
+				new Response.Listener<String>() {
+
+					@Override
+					public void onResponse(String response) {
+						Log.d("Retrieving user deals list ", response.toString());
+						PublicValues.userDealsListResponse = response;
+						readMyDealsJson(response.toString());
+
+					}
+				}, new Response.ErrorListener() {
+
+					@Override
+					public void onErrorResponse(VolleyError error) {
+						VolleyLog.d("Retrieving user deals list error", "Error: "
+								+ error.getMessage());
+
+					}
+				});
+
+		// Adding request to request queue
+		AppController.getInstance().addToRequestQueue(strReq,
+				tag_string_mydeals_req);
+
+	}
+	
+	protected void readMyDealsJson(String response) {
+		// TODO Auto-generated method stub
+		
+		try 
+		 {
+			JSONObject jsonObj = new JSONObject(response);
+			
+			JSONArray itemarray=jsonObj.getJSONArray("deals");
+		    Log.d("Deals Inside item json", ""+itemarray);
+			
+			for(int i=0;i<itemarray.length();i++)
+			{
+				
+				JSONObject Jsonitem = itemarray.getJSONObject(i);
+				
+				DealsDomain mydeals =new DealsDomain();
+				
+				mydeals.setDealID(Jsonitem.getInt("dealID"));
+				mydeals.setRestaurantID(Jsonitem.getInt("restaurantID"));
+				mydeals.setCouponCode(Jsonitem.getString("couponCode"));
+				mydeals.setMinimumPurchase(Jsonitem.getDouble("minimumPurchase"));
+				mydeals.setUserID(Jsonitem.getInt("userID"));
+				mydeals.setImage(Jsonitem.getString("image"));
+				mydeals.setDiscount(Jsonitem.getDouble("discount"));
+				mydeals.setRestaurantName(Jsonitem.getString("restaurantName"));
+				mydeals.setDealValidityDate(Jsonitem.getString("dealValidityDate"));
+
+				userDealsList.add(mydeals);
+			}
+			
+		} 
+		 catch (JSONException e) 
+		 {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		PublicValues.userDeals=userDealsList;
+		Toast.makeText(getActivity(), "no:"+userDealsList.size(), Toast.LENGTH_SHORT).show();
+		Log.i("table data", userDealsList+"");
+		
+		AdapterDealsList
+		adapter = new AdapterDealsList(getActivity(),userDealsList);
+		
+		setListAdapter(adapter);
+        
 	}
 
 	@Override

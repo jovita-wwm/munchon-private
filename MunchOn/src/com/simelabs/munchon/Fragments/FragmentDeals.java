@@ -36,12 +36,12 @@ public class FragmentDeals extends SherlockFragment {
 		Bundle arg1 = new Bundle();
 		arg1.putInt("Arg for Frag1", 1);
 		mTabHost.addTab(mTabHost.newTabSpec("Tab1").setIndicator("All Deals"),
-				MyDealsFragment.class, arg1);
+				AllDealsFragment.class, arg1);
 
 		Bundle arg2 = new Bundle();
 		arg2.putInt("Arg for Frag2", 2);
 		mTabHost.addTab(mTabHost.newTabSpec("Tab2").setIndicator("My Deals"),
-				AllDealsFragment.class, arg2);
+				MyDealsFragment.class, arg2);
 
 		// TabHost host = (TabHost)view.findViewById(R.id.tabhost);
 		TabWidget widget = mTabHost.getTabWidget();

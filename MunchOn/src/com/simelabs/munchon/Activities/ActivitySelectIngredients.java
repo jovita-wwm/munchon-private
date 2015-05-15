@@ -44,7 +44,10 @@ import com.actionbarsherlock.app.SherlockListActivity;
 import com.simelabs.munchon.R;
 import com.simelabs.munchon.Adapters.AdapterSetDishQuantity;
 import com.simelabs.munchon.Adapters.CustomListAdapterDialog;
+import com.simelabs.munchon.Domain.DishesDomain;
 import com.simelabs.munchon.Domain.ImageHelper;
+import com.simelabs.munchon.Domain.PublicValues;
+import com.simelabs.munchon.Domain.RestaurantDomain;
 
 public class ActivitySelectIngredients extends SherlockActivity {
 
@@ -78,12 +81,26 @@ public class ActivitySelectIngredients extends SherlockActivity {
 	ArrayList<String> ParameterNameArray, ParameterTypeNameArray,
 			IngredientNameArray;
 	ArrayList<Double> IngredientPriceArray;
+	
+	int userType,pos;
+	String restId;
+	ArrayList<RestaurantDomain> restaurantDetails;
+	ArrayList<DishesDomain> dishDetails;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.restaurants_select_ingredients);
 
+		Intent userIntent = getIntent();
+		userType = userIntent.getIntExtra("userType", 0);
+		pos = userIntent.getIntExtra("position", 0);
+		restId = userIntent.getStringExtra("restId");
+		
+		restaurantDetails = PublicValues.allnearbyRestaurants;
+		dishDetails = PublicValues.allDishes;
+		
 		ActionBar actionBar = getSupportActionBar();
 
 		String fontPath = "fonts/LaoUI.ttf";
@@ -110,7 +127,7 @@ public class ActivitySelectIngredients extends SherlockActivity {
 
 		basket.setVisibility(View.VISIBLE);
 
-		actionBarTitle.setText(RestaurantName);
+		actionBarTitle.setText(restaurantDetails.get(pos).getName());
 		actionBarTitle.setTypeface(tfb);
 		back.setOnClickListener(new OnClickListener() {
 			@Override
@@ -145,7 +162,7 @@ public class ActivitySelectIngredients extends SherlockActivity {
 
 		DishImage.setImageBitmap(DishImageRounded);
 
-		DishName.setText(Dish_Name);
+		DishName.setText(dishDetails.get(pos).getDishName());
 		DishName.setTypeface(tfb);
 		LabelSelectQuantity.setTypeface(tf);
 		SelectQuantity.setTypeface(tf);
@@ -195,11 +212,14 @@ public class ActivitySelectIngredients extends SherlockActivity {
 		DishQuantityArray.add("8");
 		DishQuantityArray.add("9");
 
+		int ParameterCount = dishDetails.get(pos).getDishParameterCount();
+		
+		
 		
 		/***
 		 * adding item into listview
 		 */
-		for (int i = 0; i < ParameterNameArray.size(); i++) {
+		for (int i = 0; i < ParameterCount; i++) {
 			/**
 			 * inflate items/ add items in linear layout instead of listview
 			 */
@@ -215,10 +235,10 @@ public class ActivitySelectIngredients extends SherlockActivity {
 			 * getting id of row.xml
 			 */
 			TextView LabelParameter = (TextView) inflatedLayout
-					.findViewById(R.id.txt_parameter);
+					.findViewById(R.id.txt_parameter);    //NAme
 			LabelParameter.setTypeface(tf);
 			final TextView ParameterName = (TextView) inflatedLayout
-					.findViewById(R.id.txt_parameterName);
+					.findViewById(R.id.txt_parameterName);   //Types
 			ParameterName.setTypeface(tf);
 			ImageView dropDown = (ImageView) inflatedLayout
 					.findViewById(R.id.img_dropDown);
@@ -226,11 +246,14 @@ public class ActivitySelectIngredients extends SherlockActivity {
 			/**
 			 * set item into row
 			 */
+			
+			
+			
 			final String ParTypeName = ParameterTypeNameArray.get(i);
 			final String ParName = ParameterNameArray.get(i);
 
 			ParameterName.setText(ParTypeName);
-			LabelParameter.setText(ParName);
+			LabelParameter.setText(dishDetails.get(i).getParameterName());
 
 			/**
 			 * add view in top linear
