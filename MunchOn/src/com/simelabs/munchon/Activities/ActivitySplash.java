@@ -11,6 +11,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -19,6 +22,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.Request.Method;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.simelabs.munchon.R;
 import com.simelabs.munchon.Beacon.MyService;
@@ -29,6 +33,7 @@ import com.simelabs.munchon.Domain.PublicValues;
 import com.simelabs.munchon.Domain.RestaurantDomain;
 import com.simelabs.munchon.Location.GPSTracker;
 import com.simelabs.munchon.Network.Internet;
+import com.simelabs.munchon.utils.Crypto;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -109,9 +114,11 @@ Handler handler = new Handler();
 		    		getLocation();
 		    		makeStringReq(class1);
 		    	
+		    		encrypt();
 		    	}
 		    	
 		    }
+
 		},3000);
 		
 	}
@@ -270,5 +277,36 @@ Handler handler = new Handler();
 			 Toast.makeText(getApplicationContext(), "Not able to get Location", Toast.LENGTH_SHORT).show();
 			 
 	   
+	}
+
+	private static String key="0123456789abcdef";
+	public void encrypt() {
+		// TODO Auto-generated method stub
+		try {
+			String s="{\"user\":{\"userid\":\"2\",\"firstName\":\"nelson\",\"lastName\":\"john\",\"email\":\"nelson@gmail.com\",\"password\":\"qwer\",\"address1\":\"schwelm\",\"address2\":\"Berlin\",\"contactNo\":\"+33469257\",\"image\":\"nic.jpg\",\"country\":\"France\"}}";
+			
+			
+			/*String h=Crypto.encrypt("jo", s);*/
+
+			
+			Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
+	         /*final SecretKeySpec secretKey = new SecretKeySpec(key, "AES");*/
+	         SecretKeySpec secretKey = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
+	         cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+	         byte[] encryptedData=cipher.doFinal(s.getBytes("UTF-8"));
+	         
+	         final String encryptedString = Base64.encodeToString(encryptedData, Base64.DEFAULT);
+	         /*final String encryptedString = cipher.doFinal(strToEncrypt.getBytes());*/
+			
+			
+			Toast.makeText(getApplicationContext(), encryptedString, Toast.LENGTH_SHORT).show();
+			Log.i("encrypt", encryptedString);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
 	}
 	}

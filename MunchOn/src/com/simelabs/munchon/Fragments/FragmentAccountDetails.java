@@ -7,8 +7,8 @@ import com.simelabs.munchon.R;
 import com.simelabs.munchon.Activities.ActivityAccountAddLocation;
 import com.simelabs.munchon.DB.Const;
 import com.simelabs.munchon.DB.ServiceRequests;
-import com.simelabs.munchon.Domain.HttprequestsentFeedback;
 import com.simelabs.munchon.Domain.PublicValues;
+import com.simelabs.munchon.Interfaces.InterfaceHttprequestsentFeedback;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -25,7 +25,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class FragmentAccountDetails extends Fragment implements HttprequestsentFeedback{
+public class FragmentAccountDetails extends Fragment implements InterfaceHttprequestsentFeedback{
 	Context context;
 	 private View mContentView;
 	 LinearLayout save,change,address;

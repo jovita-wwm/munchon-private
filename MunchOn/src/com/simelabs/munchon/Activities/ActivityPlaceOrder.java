@@ -23,8 +23,8 @@ import com.simelabs.munchon.Beacon.MyService;
 import com.simelabs.munchon.DB.AppController;
 import com.simelabs.munchon.DB.Const;
 import com.simelabs.munchon.DB.ServiceRequests;
-import com.simelabs.munchon.Domain.HttprequestsentFeedback;
 import com.simelabs.munchon.Domain.PublicValues;
+import com.simelabs.munchon.Interfaces.InterfaceHttprequestsentFeedback;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -52,7 +52,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ActivityPlaceOrder extends Activity implements OnClickListener,HttprequestsentFeedback{
+public class ActivityPlaceOrder extends Activity implements OnClickListener,InterfaceHttprequestsentFeedback{
 
 	LinearLayout itemlist;
 	ImageView emailstatus;

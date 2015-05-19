@@ -7,6 +7,8 @@ import com.simelabs.munchon.Activities.ActivityRestaurantMenu;
 import com.simelabs.munchon.Activities.BaseClassActionBar;
 import com.simelabs.munchon.Domain.BeaconDomain;
 import com.simelabs.munchon.Domain.PublicValues;
+import com.simelabs.munchon.Interfaces.InterfaceHttprequestsentFeedback;
+import com.simelabs.munchon.Interfaces.InterfaceUpdateTable;
 
 
 import android.app.Activity;
@@ -24,12 +26,15 @@ public class MyService extends Service {
 	private static final String TAG = "MyService";
 	 private BeaconManager beaconManager;
 	 private static final Region ALL_ESTIMOTE_BEACONS_REGION = new Region("rid", null, null, null);
-	 
+	 static InterfaceUpdateTable table;
 	 public int bcountold,bcountnew;
 	Activity act;
 	 public MyService(Activity a) {
 		// TODO Auto-generated constructor stub
 		 act=a;
+	}
+	 public MyService() {
+		// TODO Auto-generated constructor stub
 	}
 	 
 	@Override
@@ -112,8 +117,10 @@ public class MyService extends Service {
 	   		
 	   		Toast.makeText(getApplicationContext(), ""+b.getTable_name(), Toast.LENGTH_SHORT).show();
 	   		
-	   		ActivityRestaurantMenu act=new ActivityRestaurantMenu();
-	   		act.update(b.getTable_name());
+	   		/*ActivityRestaurantMenu act=new ActivityRestaurantMenu();
+	   		act.update(b.getTable_name());*/
+	   		
+	   		table.updateTable(b.getTable_name());
 	   		
 	   			}
 			}
@@ -181,5 +188,11 @@ public class MyService extends Service {
 		    	
 		    	
 			}
+	  
+	  public static void setcallback(InterfaceUpdateTable instance) {
+
+			table = instance;
+
+		}
 
 }

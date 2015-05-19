@@ -15,9 +15,11 @@ import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.app.SherlockListActivity;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.simelabs.munchon.R;
+import com.simelabs.munchon.Beacon.MyService;
 import com.simelabs.munchon.Domain.PublicValues;
+import com.simelabs.munchon.Interfaces.InterfaceUpdateTable;
 
-public class BaseClassActionBar extends SherlockActivity {
+public class BaseClassActionBar extends SherlockActivity implements InterfaceUpdateTable {
 
 	TextView tableno, basketitems, actionBarTitle; // action bar
 	ImageView back, table, basket; // action bar
@@ -25,11 +27,13 @@ public class BaseClassActionBar extends SherlockActivity {
 	Typeface tf, tfb;
 	public View actionBarView;
 	public ActionBar actionBar;
+	public static InterfaceUpdateTable update;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		 
+		MyService.setcallback(this);
 		
 		actionBarView = getLayoutInflater().inflate(
 				R.layout.custom_actionbar_restaurant, null);
@@ -72,7 +76,7 @@ public class BaseClassActionBar extends SherlockActivity {
 	
 	}
 
-	public void updateTableNumber(String tablenumber)
+	/*public void updateTableNumber(String tablenumber)
 	{
 		table = (ImageView) actionBarView.findViewById(R.id.btn_table);
 		tableno = (TextView) actionBarView.findViewById(R.id.txt_table_no);
@@ -80,7 +84,7 @@ public class BaseClassActionBar extends SherlockActivity {
 		tableno.setVisibility(View.VISIBLE);
 		tableno.setText("8");
 		tableno.setTypeface(tf);
-	}
+	}*/
 	
 	public void updateBasketItemCount(String itemnumber)
 	{
@@ -93,6 +97,17 @@ public class BaseClassActionBar extends SherlockActivity {
 		Toast.makeText(getApplicationContext(), "Called", Toast.LENGTH_SHORT)
 				.show();
 		actionBarTitle.setTypeface(tfb);
+	}
+
+	@Override
+	public void updateTable(String num) {
+		// TODO Auto-generated method stub
+		table = (ImageView) actionBarView.findViewById(R.id.btn_table);
+		tableno = (TextView) actionBarView.findViewById(R.id.txt_table_no);
+		table.setVisibility(View.VISIBLE);
+		tableno.setVisibility(View.VISIBLE);
+		tableno.setText(num);
+		tableno.setTypeface(tf);
 	}
 
 	

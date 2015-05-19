@@ -104,7 +104,7 @@ public class ActivityRestaurantHome extends BaseClassActionBar {
 		in = intent.getIntExtra("position", 0);
 		ListPosition = in;
 
-		setActionBarTitle(restaurantDetails.get(ListPosition).getName());
+		//setActionBarTitle(restaurantDetails.get(ListPosition).getName());
 
 		Toast.makeText(getApplicationContext(),
 				"position is " + String.valueOf(ListPosition), Toast.LENGTH_SHORT).show();

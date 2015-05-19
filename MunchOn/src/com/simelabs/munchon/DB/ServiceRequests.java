@@ -23,9 +23,9 @@ import com.android.volley.Response.ErrorListener;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.simelabs.munchon.Domain.BeaconDomain;
-import com.simelabs.munchon.Domain.HttprequestsentFeedback;
 import com.simelabs.munchon.Domain.PublicValues;
 import com.simelabs.munchon.Domain.RestaurantDomain;
+import com.simelabs.munchon.Interfaces.InterfaceHttprequestsentFeedback;
 
 public class ServiceRequests {
 
@@ -34,7 +34,7 @@ public class ServiceRequests {
 	 String str_responce;
 	 public ArrayList<RestaurantDomain> allrestuarants=new ArrayList<RestaurantDomain>();
 	 public ArrayList<BeaconDomain> allbeacons=new ArrayList<BeaconDomain>();
-	 static HttprequestsentFeedback feedback;
+	 static InterfaceHttprequestsentFeedback feedback;
 	public ServiceRequests(Context cotxt) {
 		// TODO Auto-generated constructor stub
 	context=cotxt;
@@ -241,7 +241,7 @@ public void readBeaconJson(String responce)
 	}
 	
 	
-	public static void setcallback(HttprequestsentFeedback instance) {
+	public static void setcallback(InterfaceHttprequestsentFeedback instance) {
 
 		feedback = instance;
 

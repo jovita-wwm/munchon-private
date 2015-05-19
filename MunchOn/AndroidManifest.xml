@@ -70,7 +70,9 @@
         <activity android:name="com.simelabs.munchon.Activities.ActivityDishCategory" />
         <activity android:name="com.simelabs.munchon.Activities.ActivityRestaurantMenu" />
         <activity android:name="com.simelabs.munchon.Activities.ActivityRestaurantHome" />
-          <activity android:name="com.simelabs.munchon.Activities.CreditcardSampleActivity" />
+          <activity android:name="com.simelabs.munchon.Activities.ActivityCreditcardSample" />
+            <activity android:name="com.simelabs.munchon.Activities.ActivityCardAddedSuccessful"/>
+                
         <activity
             android:name="com.simelabs.munchon.Activities.ActivityRestaurantMenuListTab"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />

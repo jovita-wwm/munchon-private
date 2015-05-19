@@ -319,8 +319,5 @@ public class ActivityRestaurantMenu extends BaseClassActionBar {
 				}
 			}
 			
-			public void update(String num)
-			{
-				updateTableNumber(num);
-			}
+			
 }
